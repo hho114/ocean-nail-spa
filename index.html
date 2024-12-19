@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <!-- Favicon Icon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/assets/images/store-logo.ico"
+    />
+    <!-- Font family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9980W97ZEN"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9980W97ZEN");
+    </script>
+    <title>Ocean Nail Spa</title>
+  </head>
+  <body>
+ <!-- ElfSight Widget -->
+ <div class="elfsight-popup" className = "absolute">
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-2da91599-cf2e-4cc1-b62b-d240dfcd0cad" data-elfsight-app-lazy></div>
+</div>
+
+<!-- Iframe -->
+<iframe src="https://widget.elfsig.ht/275fdadf-217a-4c14-b434-a71acc71ebf4" width="100%" style="position: absolute; top: 0; left: 0; display: none;" title="ElfSight Widget"></iframe>
+
+<div id="root" className="relative"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

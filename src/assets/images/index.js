@@ -1,6 +1,8 @@
 //Banners
+export { default as heroBanner } from "./heroBanner.jpg";
+export { default as heroBanner1 } from "./heroBanner1.jpg";
+export { default as heroBanner2 } from "./heroBanner2.jpg";
 export { default as heroBanner3 } from "./heroBanner3.png";
-export { default as heroBanner4 } from "./heroBanner4.png";
 export { default as bannerStory } from "./bannerStory.png";
 export { default as bannerService } from "./bannerService.png";
 export { default as bannerGallery } from "./bannerGallery.png";
@@ -36,14 +38,7 @@ export { default as pic27 } from "./pic-27.jpg";
 export { default as pic28 } from "./pic-28.jpg";
 export { default as pic29 } from "./pic-29.jpg";
 export { default as pic30 } from "./pic-30.jpg";
-export { default as pic31 } from "./pic-31.jpg";
-export { default as pic32 } from "./pic-32.jpg";
-export { default as pic33 } from "./pic-33.jpg";
-export { default as pic34 } from "./pic-34.jpg";
-export { default as pic35 } from "./pic-35.jpg";
-export { default as pic36 } from "./pic-36.jpg";
-export { default as pic37 } from "./pic-37.jpg";
-export { default as pic38 } from "./pic-38.jpg";
+
 
 // Products slideshow in Home Page
 export { default as productOne } from "./product-1.webp";

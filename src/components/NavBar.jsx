@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import storeLogo from "../assets/images/store-logo.jpg";
+import storeLogo from "../assets/images/store-logo.png";
 import { Button } from "flowbite-react";
 
 export default function NavBar() {

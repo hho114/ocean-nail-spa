@@ -57,7 +57,7 @@ export default function Footer() {
         <div className="business-hour-container flex flex-col gap-10">
           <h3 className="text-2xl">Business hours</h3>
           <ul className="flex flex-col gap-4">
-            <li>Mon-Sat: 10am - 8pm</li>
+            <li>Mon-Fri: 10am - 8pm</li>
             <li>Sat: 10am - 4pm</li>
             {/* <li>Sun: 10am-4pm</li> */}
             <li className="font-bold italic">*Holiday hours may change</li>
@@ -66,7 +66,7 @@ export default function Footer() {
       </div>
       <div className="text-center pt-20 opacity-40 text-sm">
         {" "}
-        <p>&copy; 2024. All rights reserved.</p>
+        <p>&copy; 2025. All rights reserved.</p>
       </div>
     </footer>
   );

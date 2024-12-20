@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const serviceDetails = {
   manicure: [
     { name: "Dipping Powder Manicure", price: "$0" },
-    { name: "Regular Manicure", price: "$25" },
+    { name: "Regular Manicure", price: "$123" },
     { name: "Shellac Manicure", price: "$35" },
     { name: "Deluxe Manicure", price: "$37" },
     { name: "Regular Hand Polish Change", price: "$10" },

@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const serviceDetails = {
-  manicure: [
+  "manicure": [
     { name: "Dipping Powder Manicure", price: "$45" },
     { name: "Regular Manicure", price: "$25" },
     { name: "Shellac Manicure", price: "$35" },
@@ -11,7 +11,7 @@ const serviceDetails = {
     { name: "Shellac Hand Polish Change", price: "$25" },
     { name: "Paraffin wax for hands", price: "$12" },
   ],
-  pedicure: [
+  "pedicure": [
     { name: "Bath Bomb Pedicure", price: "$48" },
     { name: "Shellac Pedicure", price: "$50" },
     { name: "Collagen Deluxe Pedicure", price: "$55" },
@@ -25,7 +25,7 @@ const serviceDetails = {
     { name: "Special Spa Pedicure ", price: "$60 " },
     { name: "Special Spa Pedicure | with Gel", price: "$75" },
   ],
-  packages: [
+  "packages": [
     { name: "Regular Manicure and Pedicure", price: "$55" },
     { name: "Regular pedicure and shellac manicure", price: "$65" },
     { name: "Shellac pedicure and regular manicure", price: "$70" },

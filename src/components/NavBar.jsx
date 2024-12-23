@@ -79,7 +79,7 @@ export default function NavBar() {
           HOME
         </NavLink>
         <NavLink
-          to="/services/manicure"
+          to="/services/manicure and pedicure"
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
           SERVICES

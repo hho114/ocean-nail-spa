@@ -22,51 +22,51 @@ export default function Services() {
         <nav className="flex mobile:flex-wrap mobile:justify-center desktop:gap-6 mobile:gap-8 pt-10 mobile:pb-4 uppercase">
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
-            to="/services/manicure"
+            to="/services/manicure and pedicure"
           >
-            Manicure
+            Manicure and Pedicure
           </NavLink>
 
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
-            to="/services/pedicure"
+            to="/services/nail enhancement"
           >
-            Pedicure
+            Nail Enhancement
           </NavLink>
 
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
-            to="/services/packages"
+            to="/services/waxing"
           >
-            Packages
+            Waxing
           </NavLink>
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
-            to="/services/artificial-nails"
+            to="/services/design"
           >
-            Artificial Nails
+            Design
           </NavLink>
 
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
-            to="/services/kids-services"
+            to="/services/kids services"
           >
             Kids Services
           </NavLink>
 
           <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
-            to="/services/eyeslash-extension"
+            to="/services/addition services"
           >
-            Eyeslash Extension
+            Addition Services
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             style={({ isActive }) => (isActive ? activeStyles : null)}
             to="/services/extra-services"
           >
             Extra services
-          </NavLink>
+          </NavLink> */}
         </nav>
       </div>
       <div>

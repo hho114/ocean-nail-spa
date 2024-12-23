@@ -21,7 +21,7 @@ const serviceDetails = {
     { name: "Ombre Full Set", price: "$40+" },
     { name: "White Tip Full Set", price: "$55+" },
   ],
-  "Waxing": [
+  "waxing": [
     { name: "Eyebrows", price: "$10" },
     { name: "Lips", price: "$7" },
     { name: "Chin", price: "$7" },
@@ -51,10 +51,10 @@ const serviceDetails = {
   ],
   "addition services": [
     { name: "Finger/ Toe Nails Color Change", price: "" },
-    { name: "Nail Shape Change", price: "$" },
-    { name: "Color Change On Acrylic Nail", price: "$" },
-    { name: "Nail Repair", price: "$" },
-    { name: "Finger/ Toes Nails Cutting", price: "$" },
+    { name: "Nail Shape Change", price: "" },
+    { name: "Color Change On Acrylic Nail", price: "" },
+    { name: "Nail Repair", price: "" },
+    { name: "Finger/ Toes Nails Cutting", price: "" },
     { name: "Take Off ", price: "$8" },
     { name: "Shellac Removal: Toes", price: "$10" },
     { name: "Dipping Removal", price: "$12" },

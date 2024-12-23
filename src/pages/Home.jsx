@@ -57,7 +57,7 @@ export default function Home() {
               <h4 className="text-5xl">Our story</h4>
             </div>
             <p className="mobile:full desktop:w-2/3 mobile:pb-10">
-              PT Nails and Bar is dedicated to ensuring a delightful experience
+              Ocean Nail Spa is dedicated to ensuring a delightful experience
               for every customer who visits our shop. Our warm and inviting
               salon creates a comforting and relaxing atmosphere. With our
               expert nail technicians, we stand as your premier destination for

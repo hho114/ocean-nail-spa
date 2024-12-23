@@ -90,7 +90,7 @@ export default function Home() {
               satisfaction.{" "}
             </p>
             <div className="flex w-3/4">
-              <Link to="/services/manicure">
+              <Link to="/services/manicure and pedicure">
                 <Button
                   className="service-btn uppercase"
                   color="white"

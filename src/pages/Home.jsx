@@ -1,131 +1,136 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
-import { Carousel, Button } from "flowbite-react";
+// import React, { useState, useEffect }  from "react";
+// import { NavLink, Link, Outlet } from "react-router-dom";
+// import { animateScroll as scroll } from "react-scroll";
+// import { Carousel, Button } from "flowbite-react";
+// import * as Images from "../assets/images/index";
+import React, { useState, useEffect } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 import * as Images from "../assets/images/index";
 
+
+
+const activeStyles = {
+  fontWeight: "bold",
+  textDecoration: "underline",
+  color: "#161616",
+};
+
+const serviceDetailsMobile = {
+  "manicure and pedicure": [
+    { name: "Regular Manicure", price: "$20" },
+    { name: "Gel Manicure/ Callus Removal", price: "$5+" },
+    { name: "Classic Pedicure/ Removal", price: "$35+" },
+    { name: "Signature Pedicure", price: "$30" },
+    { name: "Premium Pedicure", price: "$40" },
+    { name: "Luxury Pedicure", price: "$45" },
+    { name: "Supreme Pedicure", price: "$55" },
+  ],
+  "nail enhancement": [
+    { name: "Regular Fill", price: "$25+" },
+    { name: "Gel Fill/ Cut Down", price: "$5+" },
+    { name: "Regular Full Set", price: "$32" },
+    { name: "Dipping Powder Set", price: "$35+" },
+    { name: "Gel X Full Set", price: "$45+" },
+    { name: "Builder Gel Set", price: "$45+" },
+    { name: "Ombre Full Set", price: "$40+" },
+    { name: "White Tip Full Set", price: "$55+" },
+  ],
+  "waxing": [
+    { name: "Eyebrows", price: "$10" },
+    { name: "Lips", price: "$7" },
+    { name: "Chin", price: "$7" },
+    { name: "Face", price: "$35+" },
+    { name: "Under Arm", price: "$20+" },
+    { name: "Half Arms", price: "$25+" },
+    { name: "Full Arms", price: "$40+" },
+    { name: "Half Leg", price: "$50+" },
+    { name: "Full Leg", price: "$50+" },
+    { name: "Back", price: "$50+" },
+  ],
+  "design": [
+    { name: "Catey's", price: "$5+" },
+    { name: "Regular French Tip", price: "$7" },
+    { name: "Deep French Tip", price: "$12" },
+    { name: "Chrome", price: "$12" },
+    { name: "Nail Design (2 Nails)", price: "$5+" },
+  ],
+  "kids services": [
+    { name: "Kid Manicure", price: "$12" },
+    { name: "Kid Pedicure/ With Gel Polish", price: "+$10" },
+    { name: "Kid Deluxe Pedicure", price: "$40" },
+    { name: "Pedicure and Manicure", price: "$45" },
+    { name: "Full Pedicure and Hands Color", price: "$35" },
+    { name: "Add-on: Shellac Color", price: "+$10" },
+    { name: "Services include free designs", price: "❤️" },
+  ],
+  "addition services": [
+    { name: "Finger/ Toe Nails Color Change", price: "" },
+    { name: "Nail Shape Change", price: "" },
+    { name: "Color Change On Acrylic Nail", price: "" },
+    { name: "Nail Repair", price: "" },
+    { name: "Finger/ Toes Nails Cutting", price: "" },
+    { name: "Take Off ", price: "$8" },
+    { name: "Shellac Removal: Toes", price: "$10" },
+    { name: "Dipping Removal", price: "$12" },
+    { name: "Ombre Style Extra", price: "$15" },
+    { name: "French Extra", price: "$5" },
+    { name: "French Tips", price: "+$7" },
+    { name: "Nails Sculpture Add-on", price: "+$15" },
+  ],
+};
+
 export default function Home() {
-  const heroBanners = [
-    Images.heroBanner,
-    Images.heroBanner1,
-    Images.heroBanner2,
-    Images.heroBanner3,
-  ];
-  const productImages = [
-    Images.productOne,
-    Images.productTwo,
-    Images.productThree,
-    Images.productFour,
-    Images.productFive,
-    Images.productSix,
-    Images.productSeven,
-    Images.productEight,
-    Images.productNine,
-    Images.productTen,
-    Images.productEleven,
-    Images.productTwelve,
-  ];
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const scrollToTopOnClick = () => {
-    scroll.scrollToTop({
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const capitalizeFirstLetter = (str) =>
+    str.replace(/\b\w/g, (char) => char.toUpperCase());
   return (
-    <>
-      <div className="home-container w-screen mb-20">
-        <div className="cta-image-container">
-          <Carousel slideInterval={3000}>
-            {heroBanners.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`hero-banner-${index}`}
-                loading="lazy"
-              />
-            ))}
-          </Carousel>
+      
+              <div className="all-services-container">
+        <div className="cta-image-container mb-10 mobile:h-3/5">
+          <img
+            src={Images.heroBanner}
+            alt="service-banner"
+            loading="lazy"
+          />
         </div>
-        <div className="story-container w-3/4 mx-auto py-20 desktop:flex mobile:flex-col">
-          <div className="story-message-container desktop:w-3/5 mobile:w-full flex flex-col gap-10">
-            <p className="number-mark w-12 font-bold pb-10">/01</p>
-            <div className="story-title-container pt-4">
-              <h3 className="section-title text-4xl">We love doing nails</h3>
-              <h4 className="text-5xl">Our story</h4>
-            </div>
-            <p className="mobile:full desktop:w-2/3 mobile:pb-10">
-              Ocean Nail Spa is dedicated to ensuring a delightful experience
-              for every customer who visits our shop. Our warm and inviting
-              salon creates a comforting and relaxing atmosphere. With our
-              expert nail technicians, we stand as your premier destination for
-              top-notch nail care!
-            </p>
-          </div>
-          <div className="story-image-container desktop:w-3/5 mobile:h-2/3 mobile:w-full">
-            <img
-              className="w-full h-full"
-              src={Images.bannerStory}
-              alt="story-banner"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div className="service-introduction-container desktop:flex mobile:flex-col w-3/4 mx-auto py-20">
-          <div className="service-header-container desktop:w-3/5 mobile:w-full flex flex-col gap-10">
-            <p className="number-mark w-12 font-bold pb-10">/02</p>
-            <div className="story-title-container pt-4 mobile:pb-10">
-              <h3 className="section-title text-4xl pb-3">We are proud of</h3>
-              <h4 className="text-5xl">Quality Equipment</h4>
+        <h2 className="text-center py-6 text-4xl">Our Services</h2>
+        <p className="text-center italic pb-8">
+          Explore our wide range of services tailored to meet all your beauty
+          needs.
+        </p>
+        {Object.entries(serviceDetailsMobile).map(([category, services], categoryIndex) => (
+          <div key={categoryIndex} className="service-category-container py-6">
+            <h3 className="text-2xl text-center py-4 uppercase font-bold">
+              {capitalizeFirstLetter(category)}
+            </h3>
+            <div className="price-detail-container flex flex-col gap-8 py-4">
+              {services.map((service, index) => (
+                <div className="flex w-3/4 justify-between mx-auto" key={index}>
+                  <h4 className="uppercase font-bold">{service.name}</h4>
+                  <h4>{service.price}</h4>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="service-message-container desktop:w-2/5 mobile:full flex flex-col justify-around mobile:gap-4">
-            <p className="w-full p-0 tracking-wider">
-              We take pride in delivering superb nail care to our customers,
-              upholding the utmost standards of cleanliness and sterilization.
-              Our equipment and tools undergo UV sterilization, and we employ
-              disposable spa liners, files, and buffers for your safety and
-              satisfaction.{" "}
-            </p>
-            <div className="flex w-3/4">
-              <Link to="/services/manicure and pedicure">
-                <Button
-                  className="service-btn uppercase"
-                  color="white"
-                  onClick={scrollToTopOnClick}
-                >
-                  View our services
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="product-container desktop:flex mobile:flex-col w-3/4 mx-auto py-20">
-          <div className="product-header-container desktop:w-3/5 mobile:w-full flex flex-col gap-10">
-            <p className="number-mark w-12 font-bold pb-10">/03</p>
-            <div className="product-title-container pt-4 mobile:pb-10">
-              <h3 className="section-title text-4xl pb-3">We use</h3>
-              <h4 className="text-5xl">Quality Products</h4>
-            </div>
-          </div>
-          <div className="product-slide-container desktop:w-2/5 mobile:w-full">
-            <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 w-full">
-              <Carousel slideInterval={3000}>
-                {productImages.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`product-slide-${index}`}
-                    loading="lazy"
-                  />
-                ))}
-              </Carousel>
-            </div>
-          </div>
-        </div>
+        )
+        )}
       </div>
-    </>
-  );
+       
+    );
+  
 }

@@ -6,12 +6,18 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 /*
 =====================
 Header
 =====================
 
+
 */
+h3, h4 {
+    margin: 0.5rem 0;
+}
 .social-icon-container {
     a {
         img {
@@ -125,6 +131,11 @@ service-menu
 */
 .service-price-container {
     width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; // Adjust the gap between sections
+    padding: 0;         // Remove unnecessary padding
+    margin: 0 auto;  
 }
 
 @media only screen and (min-width: 390px) and (max-width: 980px) {
@@ -139,7 +150,9 @@ service-menu
 
 .price-detail-container {
     background-color: #fafafa;
-    margin-bottom: 20%;
+    // margin-bottom: 20%;
+    margin-bottom: 1.5rem; 
+    padding: 1rem 0;  
 }
 
 /*

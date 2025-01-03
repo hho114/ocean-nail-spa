@@ -15,18 +15,17 @@ const serviceDetailsMobile = {
   "manicure and pedicure": [
     { name: "Regular Manicure", price: "$20" },
     { name: "Gel Manicure", price: "$30" },
-    { name: "💅 Add on: Gel Removal", price: "+$5" },
+    { name: "💅 Add on: Gel Removal", price: "$5" },
     { name: "Classic Pedicure", price: "$30" },
-    { name: "💅 Add on: Callus Removal", price: "+$5" },
+    { name: "💅 Add on: Callus Removal", price: "$5" },
     { name: "Signature Pedicure", price: "$40" },
-    { name: "Premium Pedicure", price: "$45" },
     { name: "Luxury Pedicure", price: "$55" },
     { name: "Supreme Pedicure", price: "$65" },
   ],
   "nail enhancement": [
     { name: "Regular Fill", price: "$25+" },
     { name: "Gel Fill", price: "$35+" },
-    { name: "💅 Add on: Cut Down for Gel Fill or Regular Fill", price: "+$5" },
+    { name: "💅 Add on: Cut Down for Gel Fill or Regular Fill", price: "$5" },
     { name: "Regular Full Set", price: "$35+" },
     { name: "Gel Full Set", price: "$45+" },
     { name: "Dipping Powder Set", price: "$45+" },
@@ -59,7 +58,7 @@ const serviceDetailsMobile = {
   "kids services": [
     { name: "Kid Manicure", price: "$12" },
     { name: "Kid Pedicure", price: "$20" },
-    { name: "💅 Add on: Gel Polish for Manicure or Pedicure", price: "+$10" },
+    { name: "💅 Add on: Gel Polish for Manicure or Pedicure", price: "$10" },
     { name: "Finger/Toenails color change", price: "$8" },
     { name: "Finger/Toenails color change with Gel Polish", price: "$15" },
   ],
@@ -130,15 +129,15 @@ export default function Home() {
           </div>
         )
         )}
-        {/* Note Section */}
-      <div className="note-container text-center mt-10 px-6 py-4 bg-gray-100 border rounded-lg">
-        <p className="italic text-sm">
-          <strong>Note:</strong> All types of pedicure with additional gel
-          polish will be extra <strong>$12</strong>. Prices start with short
-          length and regular shapes (square, round). Prices may vary for longer
-          lengths, special shapes, and more than 3 colors.
-        </p>
-      </div>
+      {/* Note Section */}
+<div className="note-container text-center mt-10 px-6 py-4 bg-gray-100 border rounded-lg">
+  <p className="italic text-sm">
+    <strong>Note:</strong> All types of pedicure with additional gel
+    polish will be extra <strong>$12</strong>. Prices start with short
+    length and regular shapes (square, round). Prices may vary for longer
+    lengths, special shapes, and more than 3 colors. Prices with a <strong>plus sign (+)</strong> indicate that the price could be higher depending on the service.
+  </p>
+</div>
 
       {/* Barcode Section */}
       <div className="barcode-container text-center mt-6">

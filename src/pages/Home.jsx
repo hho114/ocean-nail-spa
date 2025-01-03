@@ -18,7 +18,7 @@ const serviceDetailsMobile = {
     { name: "💅 Add on: Gel Removal", price: "$5" },
     { name: "Classic Pedicure", price: "$30" },
     { name: "💅 Add on: Callus Removal", price: "$5" },
-    { name: "Signature Pedicure", price: "$40" },
+    { name: "Signature Pedicure", price: "$45" },
     { name: "Luxury Pedicure", price: "$55" },
     { name: "Supreme Pedicure", price: "$65" },
   ],

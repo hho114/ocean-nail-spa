@@ -6,7 +6,7 @@ export { default as heroBanner3 } from "./heroBanner3.png";
 export { default as bannerStory } from "./bannerStory.png";
 export { default as bannerService } from "./bannerService.png";
 export { default as bannerGallery } from "./bannerGallery.png";
-
+export { default as barcode } from "./barcode.png";
 // Gallery
 export { default as pic1 } from "./pic-1.jpg";
 export { default as pic2 } from "./pic-2.jpg";

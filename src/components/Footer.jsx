@@ -1,4 +1,5 @@
 import React from "react";
+import * as Images from "../assets/images/index";
 
 export default function Footer() {
   return (
@@ -29,7 +30,12 @@ export default function Footer() {
           <div className="address-container flex flex-col gap-4">
             <h4 className="text-lg font-bold uppercase">Address</h4>
             <h5>Ocean Nail Spa</h5>
-            <p className="w-2/3">
+            <p className="w-2/3 flex items-center gap-2 ">
+            <img 
+                src={Images.locationIcon} 
+                alt="phone icon" 
+                className="w-5 h-5" 
+              />
               Address: {""}
               <a
                 href="https://maps.app.goo.gl/kxxcnRxt94F2ebQS7"
@@ -42,7 +48,12 @@ export default function Footer() {
           </div>
           <div className="contact-container flex flex-col gap-4 pb-10">
             <h4 className="text-lg font-bold uppercase">Contact</h4>
-            <p className="w-2/3">
+            <p className="w-2/3 flex items-center gap-2">
+               <img 
+                src={Images.phoneIcon} 
+                alt="phone icon" 
+                className="w-5 h-5" 
+              />
               Phone #: <a href="tel:+1 804 684 5086">(804) 684 - 5086</a>
             </p>
             {/* <p className="w-auto">
@@ -65,8 +76,17 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center pt-20 opacity-40 text-sm">
-        {" "}
-        <p>&copy; 2025. All rights reserved.</p>
+      <p>
+        &copy; 2025. All rights reserved. Designed by{" "}
+        <a
+          href="https://alexhuyho.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-blue-600"
+        >
+          Alex Ho
+        </a>
+      </p>
       </div>
     </footer>
   );

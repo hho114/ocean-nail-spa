@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Promotion from "./pages/Promotion";
 import Gallery from "./pages/Gallery";
+import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 import "./App.scss";
@@ -22,6 +23,7 @@ function App() {
             </Route>
 
             <Route path="gallery" element={<Gallery />} />
+            <Route path="contactUs" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

@@ -115,7 +115,7 @@ export default function Home() {
         </p>
         {Object.entries(serviceDetailsMobile).map(([category, services], categoryIndex) => (
           <div key={categoryIndex} className="service-category-container py-6">
-            <h3 className="text-2xl text-center py-4 uppercase font-bold">
+            <h3 className="text-2xl text-center py-4 font-bold">
               {capitalizeFirstLetter(category)}
             </h3>
             <div className="price-detail-container flex flex-col gap-8 py-4">

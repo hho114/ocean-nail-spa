@@ -76,7 +76,7 @@ export default function NavBar() {
           to="."
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
-          HOME
+          Home
         </NavLink>
         {/* <NavLink
           to="/services/manicure and pedicure"
@@ -88,10 +88,18 @@ export default function NavBar() {
           to="/gallery"
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
-          GALLERY
+          Gallery
+        </NavLink>
+
+        <NavLink
+          to="/contactUs"
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+          className="whitespace-nowrap"
+        >
+          Contact Us
         </NavLink>
         {/* <a
-          href="https://nailsolutionplus.firebaseapp.com/?storeKey=-NmmzuEPT8VKQw2mh2r7"
+          href=""
           className="focus:outline-none"
         >
           <Button color="dark" className="uppercase mobile:p-0.1">

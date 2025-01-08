@@ -3,13 +3,19 @@ import React, { useState, useEffect } from "react";
 // import { NavLink, Outlet } from "react-router-dom";
 import * as Images from "../assets/images/index";
 
-
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 const activeStyles = {
   fontWeight: "bold",
   textDecoration: "underline",
-  color: "#161616",
+  color: isDarkMode ? "#f5f5f5" : "#161616", // Light color for dark mode
 };
+
+// const activeStyles = {
+//   fontWeight: "bold",
+//   textDecoration: "underline",
+//   color: "#161616",
+// };
 
 const serviceDetailsMobile = {
   "manicure and pedicure": [

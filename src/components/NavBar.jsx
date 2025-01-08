@@ -5,11 +5,18 @@ import { Button } from "flowbite-react";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const activeStyles = {
-    fontWeight: "bold",
-    textDecoration: "underline",
-    color: "#161616",
-  };
+  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const activeStyles = {
+  fontWeight: "bold",
+  textDecoration: "underline",
+  color: isDarkMode ? "#f5f5f5" : "#161616", // Light color for dark mode
+};
+  // const activeStyles = {
+  //   fontWeight: "bold",
+  //   textDecoration: "underline",
+  //   color: "#161616",
+  // };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

@@ -17,7 +17,8 @@ export default function Footer() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe> */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3435.972249377252!2d-76.49628822400872!3d37.25996094164806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b081a379286bb7%3A0x529a71cf5e8b6df3!2s1777%20George%20Washington%20Memorial%20Hwy%2C%20Gloucester%20Point%2C%20VA%2023062!5e1!3m2!1sen!2sus!4v1734620921761!5m2!1sen!2sus"
+          
+            src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d110039.58182715232!2d-76.49383742099491!3d37.26002988112976!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b081000a9b1da7%3A0x5fb861a4eba91ecf!2sOcean%20Nail%20Spa!5e1!3m2!1sen!2sus!4v1736370642010!5m2!1sen!2sus"
             style={{ border: 0 }}
             loading="lazy"
             className="w-full h-full"

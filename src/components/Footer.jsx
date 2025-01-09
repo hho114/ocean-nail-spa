@@ -39,7 +39,7 @@ export default function Footer() {
               />
               Address: {""}
               <a
-                href="https://maps.app.goo.gl/kxxcnRxt94F2ebQS7"
+                href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
                 target="_blank"
                 rel="noopener noreferrer"
               >

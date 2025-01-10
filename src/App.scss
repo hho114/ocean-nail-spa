@@ -376,8 +376,9 @@ back-to-top
   }
   
   .nav-link.active {
-    font-weight: bold;
-    color: #1A4D7F;
+    font-size: 1.2rem; /* Slightly larger font size for active link */
+  font-weight: bold;
+  color: #1A4D7F; 
     text-decoration: underline;
   }
 

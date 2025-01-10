@@ -22,7 +22,7 @@ export default function NavBar() {
           <a
             className="site-logo"
             href="https://www.oceannailspava.com"
-            target="_blank"
+            // target="_blank"
             rel="noopener noreferrer"
           >
             <img

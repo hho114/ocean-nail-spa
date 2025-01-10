@@ -1,9 +1,10 @@
-
 import React, { useState, useEffect } from "react";
 // import { NavLink, Outlet } from "react-router-dom";
 import * as Images from "../assets/images/index";
 
-const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const isDarkMode =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 const activeStyles = {
   fontWeight: "bold",
@@ -42,7 +43,7 @@ const serviceDetailsMobile = {
     { name: "Ombre Full Fill", price: "$40+" },
     { name: "White Tip Full Set", price: "$40+" },
   ],
-  "waxing": [
+  waxing: [
     { name: "Eyebrows", price: "$10" },
     { name: "Lips", price: "$7" },
     { name: "Chin", price: "$7" },
@@ -54,7 +55,7 @@ const serviceDetailsMobile = {
     { name: "Full Leg", price: "$50+" },
     { name: "Back", price: "$50+" },
   ],
-  "design": [
+  design: [
     { name: "Catey's", price: "$5+" },
     { name: "Regular French Tip", price: "$7" },
     { name: "Deep French Tip", price: "$12" },
@@ -81,12 +82,11 @@ const serviceDetailsMobile = {
     { name: "Toenail Extensions (2 big toes)", price: "$10" },
     { name: "Toenail Extensions Fill (2 big toes)", price: "$6" },
     { name: "Paraffin Treatment ", price: "$10" },
-    
   ],
 };
 
 export default function Home() {
-// const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   // useEffect(() => {
   //   const handleResize = () => {
@@ -105,21 +105,39 @@ export default function Home() {
   const capitalizeFirstLetter = (str) =>
     str.replace(/\b\w/g, (char) => char.toUpperCase());
   return (
-      
-              <div className="all-services-container">
-        <div className="cta-image-container mb-10 mobile:h-3/5">
-          <img
-            src={Images.heroBanner}
-            alt="service-banner"
-            loading="lazy"
-          />
-        </div>
-        <h2 className="text-center py-6 text-4xl">Our Services</h2>
-        <p className="text-center italic pb-8">
-          Explore our wide range of services tailored to meet all your beauty
-          needs.
-        </p>
-        {Object.entries(serviceDetailsMobile).map(([category, services], categoryIndex) => (
+    <div className="all-services-container">
+      <div className="cta-image-container mb-10 mobile:h-3/5">
+        <img src={Images.heroBanner} alt="service-banner" loading="lazy" />
+      </div>
+
+     {/* Hover Buttons Section */}
+      <div className="hover-buttons-container text-center mt-10">
+        {/* Call Button */}
+        <a
+          href="tel:+1 804 684 5086"
+          className="hover-button call-button inline-block px-6 py-3 mx-4 text-white rounded-full"
+        >
+          Call Us
+        </a>
+
+        {/* Get Directions Button */}
+        <a
+          href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover-button directions-button inline-block px-6 py-3 mx-4 text-white rounded-full"
+        >
+          Get Directions
+        </a>
+      </div>
+
+      <h2 className="text-center py-6 text-4xl">Our Services</h2>
+      <p className="text-center italic pb-8">
+        Explore our wide range of services tailored to meet all your beauty
+        needs.
+      </p>
+      {Object.entries(serviceDetailsMobile).map(
+        ([category, services], categoryIndex) => (
           <div key={categoryIndex} className="service-category-container py-6">
             <h3 className="text-2xl text-center py-4 font-bold">
               {capitalizeFirstLetter(category)}
@@ -134,34 +152,39 @@ export default function Home() {
             </div>
           </div>
         )
-        )}
+      )}
       {/* Note Section */}
-<div className="note-container text-center mt-10 px-6 py-4 bg-gray-100 border rounded-lg">
-  <p className="italic text-sm">
-    <strong>Note:</strong> All types of pedicure with additional gel
-    polish will be extra <strong>$12</strong>. Prices start with short
-    length and regular shapes (square, round). Prices may vary for longer
-    lengths, special shapes, and more than 3 colors. Prices with a <strong>plus sign (+)</strong> indicate that the price could be higher depending on the service.
-  </p>
-</div>
+      <div className="note-container text-center mt-10 px-6 py-4 bg-gray-100 border rounded-lg">
+        <p className="italic text-sm">
+          <strong>Note:</strong> All types of pedicure with additional gel
+          polish will be extra <strong>$12</strong>. Prices start with short
+          length and regular shapes (square, round). Prices may vary for longer
+          lengths, special shapes, and more than 3 colors. Prices with a{" "}
+          <strong>plus sign (+)</strong> indicate that the price could be higher
+          depending on the service.
+        </p>
+      </div>
 
       {/* Barcode Section */}
       <div className="barcode-container text-center mt-6">
         <p className="mb-2 text-sm italic">
-        Scan the barcode to open the menu on your phone.
+          Scan or tap the barcode to open the menu on your phone.
         </p>
-        <a href="https://drive.google.com/file/d/1i0wFGgd5yFZFrqmDCANan3E_jfmEtxhl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://drive.google.com/file/d/1i0wFGgd5yFZFrqmDCANan3E_jfmEtxhl/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
-            src={Images.barcode}
+            src="https://quickchart.io/chart?cht=qr&chs=300x300&chl=https://drive.google.com/file/d/1i0wFGgd5yFZFrqmDCANan3E_jfmEtxhl/view?usp=sharing"
             alt="service-barcode"
-            className="inline-block w-34 h-34 mb-4"
+            className="barcode inline-block w-32 h-32 mb-4 rounded-barcode"
             loading="lazy"
           />
         </a>
       </div>
 
-      </div>
-       
-    );
-  
+      
+    </div>
+  );
 }

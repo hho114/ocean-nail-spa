@@ -69,7 +69,7 @@ export default function Gallery() {
               <img
                 className="gallery-image max-w-full desktop:h-auto mobile:h-full mobile:w-full rounded-lg"
                 src={image}
-                alt="gallery-image"
+                alt=""
                 loading="lazy"
               />
             </div>

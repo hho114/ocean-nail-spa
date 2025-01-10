@@ -7,7 +7,7 @@ export { default as heroBanner4 } from "./heroBanner4.jpg";
 export { default as bannerStory } from "./bannerStory.png";
 export { default as bannerService } from "./bannerService.png";
 export { default as bannerGallery } from "./bannerGallery.png";
-export { default as barcode } from "./barcode.png";
+export { default as barcodeMenu } from "./menu-qr.png";
 export { default as phoneIcon } from "./phoneIcon.png";
 export { default as locationIcon } from "./locationIcon.png";
 // Gallery

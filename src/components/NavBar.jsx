@@ -22,19 +22,19 @@ const activeStyles = {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  React.useEffect(() => {
-    const intervalId = setInterval(() => {
-      const logo = document.querySelector(".site-logo img");
-      if (logo) {
-        logo.classList.add("flip-animation");
-        setTimeout(() => {
-          logo.classList.remove("spin-animation");
-        }, 3000); // 3000 milliseconds (3 seconds) for the rotation animation
-      }
-    }, 1000); // 1000 milliseconds (1 second) interval for rotation
+  // React.useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const logo = document.querySelector(".site-logo img");
+  //     if (logo) {
+  //       logo.classList.add("flip-animation");
+  //       setTimeout(() => {
+  //         logo.classList.remove("spin-animation");
+  //       }, 3000); // 3000 milliseconds (3 seconds) for the rotation animation
+  //     }
+  //   }, 1000); // 1000 milliseconds (1 second) interval for rotation
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
-  }, []);
+  //   return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  // }, []);
 
   return (
     <div className="header-container w-3/4 mobile:w-11/12  mx-auto flex items-center justify-between mobile:justify-center">

@@ -358,3 +358,86 @@ back-to-top
       }
     
 }
+
+.nav-link {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    // color: #333;
+    color: #A8D3F0;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .nav-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+    color: #1A4D7F;
+    text-decoration: underline;
+  }
+
+  .logo {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Logo hover effect */
+.logo {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  
+
+  /* Barcode hover effect */
+.barcode {
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+.barcode:hover {
+    transform: scale(1.1); /* Slightly enlarge the barcode on hover */
+}
+
+/* Rounded corner for barcode image */
+.rounded-barcode {
+    border-radius: 16px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensures content inside the rounded area is clipped */
+  }
+
+/* Base style for hover buttons */
+.hover-button {
+    background: #A8D3F0; /* Light blue background from logo */
+    color: #1A4D7F; /* Dark blue text color from logo */
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px;
+    border: none; /* No border line */
+  }
+  
+  /* Hover effect */
+  .hover-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Specific button styles */
+  .call-button {
+    background: linear-gradient(135deg, #A8D3F0, #BCE3FA);
+  }
+  
+  .directions-button {
+    background: linear-gradient(135deg, #A8D3F0, #D0EBF9);
+  }

@@ -72,12 +72,12 @@ export default function NavBar() {
           Home
         </NavLink>
         
-        <NavLink
+        {/* <NavLink
           to="/gallery"
           className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
         >
           Gallery
-        </NavLink>
+        </NavLink> */}
 
         <NavLink
           to="/contactUs"

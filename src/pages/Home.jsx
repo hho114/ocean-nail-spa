@@ -21,18 +21,15 @@ const activeStyles = {
 const serviceDetailsMobile = {
   "manicure and pedicure": [
     { name: "Regular Manicure", price: "$20" },
-    { name: "Gel Manicure", price: "$30" },
-    { name: "💅 Add on: Gel Removal", price: "$5" },
-    { name: "Classic Pedicure", price: "$30" },
-    { name: "💅 Add on: Callus Removal", price: "$5" },
-    { name: "Signature Pedicure", price: "$45" },
-    { name: "Luxury Pedicure", price: "$55" },
-    { name: "Supreme Pedicure", price: "$65" },
+    { name: "Gel Manicure / with Gel Removal", price: "$30 / $35" },
+    { name: "Classic Pedicure / with Callus Removal", price: "$30 / $35" },
+    { name: "Signature Spa Pedicure", price: "$40" },
+    { name: "Deluxe Spa Pedicure", price: "$55" },
+    { name: "Supreme Spa Pedicure", price: "$65" },
   ],
   "nail enhancement": [
     { name: "Regular Fill", price: "$25+" },
     { name: "Gel Fill", price: "$35+" },
-    { name: "💅 Add on: Cut Down for Gel Fill or Regular Fill", price: "$5" },
     { name: "Regular Full Set", price: "$35+" },
     { name: "Gel Full Set", price: "$45+" },
     { name: "Dipping Powder Set", price: "$45+" },
@@ -40,7 +37,7 @@ const serviceDetailsMobile = {
     { name: "Builder Gel Set", price: "$50+" },
     { name: "Builder Gel Fill", price: "$40+" },
     { name: "Ombre Full Set", price: "$55+" },
-    { name: "Ombre Full Fill", price: "$40+" },
+    { name: "Ombre Fill", price: "$40+" },
     { name: "White Tip Full Set", price: "$40+" },
   ],
   waxing: [
@@ -48,40 +45,38 @@ const serviceDetailsMobile = {
     { name: "Lips", price: "$7" },
     { name: "Chin", price: "$7" },
     { name: "Face", price: "$35+" },
-    { name: "Under Arm", price: "$20+" },
-    { name: "Half Arms", price: "$25+" },
-    { name: "Full Arms", price: "$40+" },
+    { name: "Under Arm", price: "$15+" },
+    { name: "Half Arms", price: "$20+" },
+    { name: "Full Arms", price: "$30+" },
     { name: "Half Leg", price: "$30+" },
-    { name: "Full Leg", price: "$50+" },
+    { name: "Full Leg", price: "$45+" },
     { name: "Back", price: "$50+" },
   ],
   design: [
-    { name: "Catey's", price: "$5+" },
+    { name: "Cat Eyes", price: "$5+" },
     { name: "Regular French Tip", price: "$7" },
     { name: "Deep French Tip", price: "$12" },
     { name: "Chrome", price: "$12" },
     { name: "Nail Design (2 Nails)", price: "$5+" },
+    { name: "3+ Colors", price: "$5" },
   ],
   "kids services": [
-    { name: "Kid Manicure", price: "$12" },
-    { name: "Kid Pedicure", price: "$20" },
-    { name: "💅 Add on: Gel Polish for Manicure or Pedicure", price: "$10" },
-    { name: "Finger/Toenails color change", price: "$8" },
-    { name: "Finger/Toenails color change with Gel Polish", price: "$15" },
+    { name: "Kid Manicure / with Gel Polish", price: "$12 / $20" },
+    { name: "Kid Pedicure / with Gel Polish", price: "$20 / $30" },
+    { name: "Finger / Toe Nail Color Change", price: "$8 / $15" },
+    { name: "Toe Nail Color Change with Gel", price: "$10 / $18" },
   ],
   "addition services": [
-    { name: "Finger / Toe Nails Color Change Regular", price: "$12" },
-    { name: "Finger / Toe Nails Color Change Gel", price: "$22" },
+    { name: "Finger Nails Color Change / with Gel", price: "$12 / $25" },
+    { name: "Toe Nails Color Change / with Gel", price: "$15 / $28" },
     { name: "Nail Shape Change", price: "$5" },
-    { name: "Color Change On Acrylic Nail Regular", price: "$18+" },
-    { name: "Color Change On Acrylic Nail Gel", price: "$28+" },
+    { name: "Color Change On Acrylic Nail / with Gel", price: "$18 / $30" },
     { name: "Nail Repair", price: "$5+" },
-    { name: "Finger/ Toes Nails Cutting", price: "$7 / $10+" },
-    { name: "Take Off Acrylic Nail ", price: "$15+" },
-    { name: "Take off Dipping Powder ", price: "$10+" },
-    { name: "Toenail Extensions (2 big toes)", price: "$10" },
-    { name: "Toenail Extensions Fill (2 big toes)", price: "$6" },
-    { name: "Paraffin Treatment ", price: "$10" },
+    { name: "Nail Cut Down", price: "$5" },
+    { name: "Finger / Toe Nails Cutting", price: "$7 / $10+" },
+    { name: "Soak Off Acrylic Nail Only", price: "$15" },
+    { name: "Soak Off Gel / Dipping Only", price: "$10" },
+    { name: "Toe Nail Extensions (2 Big Toes)", price: "$10" },
   ],
 };
 
@@ -155,15 +150,10 @@ export default function Home() {
       )}
       {/* Note Section */}
       <div className="note-container text-center mt-10 px-6 py-4 bg-gray-100 border rounded-lg">
-        <p className="italic text-sm">
-          <strong>Note:</strong> All types of pedicure with additional gel
-          polish will be extra <strong>$12</strong>. Prices start with short
-          length and regular shapes (square, round). Prices may vary for longer
-          lengths, special shapes, and more than 3 colors. Prices with a{" "}
-          <strong>plus sign (+)</strong> indicate that the price could be higher
-          depending on the service.
-        </p>
-      </div>
+  <p className="italic text-sm">
+    <strong>Note:</strong> All types of pedicure with additional gel polish will be extra <strong>$12</strong>. Plus sign (<strong>+</strong>) indicates that the price could be higher depending on the lengths and shapes.
+  </p>
+</div>
 
       {/* Barcode Section */}
       <div className="barcode-container text-center mt-6">

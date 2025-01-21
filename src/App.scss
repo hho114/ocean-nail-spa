@@ -312,6 +312,9 @@ back-to-top
       transform: scale(1.05);    /* Small scaling effect */
       cursor: pointer;
     }
+    .theme-text {
+        color: black;
+      }
   }
 
 @media (prefers-color-scheme: dark) {
@@ -355,6 +358,10 @@ back-to-top
         background-color: #2d3748; /* Slightly darker on hover */
         transform: scale(1.05);    /* Small scaling effect */
         cursor: pointer;
+      }
+
+      .theme-text {
+        color: white;
       }
     
 }

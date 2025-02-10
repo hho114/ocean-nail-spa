@@ -308,7 +308,7 @@ export default function Home() {
 
       <h2 className="text-center py-6 text-4xl">Our Services</h2>
       <p className="text-center italic pb-8">
-        Explore our wide range of services tailored to meet all your beauty needs.
+      Welcome to Ocean Nail Spa, where beauty meets relaxation. We offer a range of services, from classic manicures and pedicures to stunning nail art, all in a clean and comfortable environment. Our skilled technicians are here to pamper you and ensure you leave feeling refreshed.
       </p>
 
       {Object.entries(serviceDetailsMobile).map(

@@ -334,7 +334,7 @@ export default function Home() {
                       </h4>
                       {service.description && (
                         <span className="theme-text ml-4 text-xl text-black dark:text-white">
-                          {expanded[`${categoryIndex}-${index}`] ? "x" : "+"}
+                          {expanded[`${categoryIndex}-${index}`] ? "\u25B2" : "\u25BC"}
                         </span>
                       )}
                     </div>

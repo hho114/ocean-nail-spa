@@ -200,7 +200,7 @@ const serviceDetailsMobile = {
     },
     {
       name: "Kid Pedicure / with Gel Polish",
-      price: "$20 / $30",
+      price: "$20 / $28",
       description: "A fun and relaxing pedicure experience for kids with gel polish option."
     },
     {

@@ -217,12 +217,12 @@ const serviceDetailsMobile = {
   "addition services": [
     {
       name: "Finger Nails Color Change / with Gel",
-      price: "$12 / $25",
+      price: "$12 / $22",
       description: "Change the color of your fingernails with an option for gel polish."
     },
     {
       name: "Toe Nails Color Change / with Gel",
-      price: "$15 / $28",
+      price: "$12 / $23",
       description: "Freshen up your toes with a new polish color with gel option available."
     },
     {
@@ -232,7 +232,7 @@ const serviceDetailsMobile = {
     },
     {
       name: "Color Change On Acrylic Nail / with Gel",
-      price: "$18 / $30",
+      price: "$18 / $25",
       description: "Acrylic nail polish change with an optional gel finish."
     },
     {

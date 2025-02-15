@@ -8,6 +8,10 @@ export default function Gallery() {
     Images.pic1,
     Images.pic2,
     Images.pic3,
+    Images.pic4,
+    Images.pic5,
+    Images.pic6,
+    Images.pic7,
     
     
 

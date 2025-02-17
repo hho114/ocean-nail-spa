@@ -9,15 +9,15 @@ export default function SocialIcon() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className="w-10" src={Images.facebookIcon} alt="facebook-icon" />
+        <img className="w-12" src={Images.facebookIcon} alt="facebook-icon" />
       </a>
-      {/* <a
-        href="https://www.instagram.com/"
+      <a
+        href="https://www.instagram.com/oceannailspa_gloucesterpoint/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className="w-6" src={Images.instagramIcon} alt="instagram-icon" />
-      </a> */}
+        <img className="w-12" src={Images.instagramIcon} alt="instagram-icon" />
+      </a>
     </div>
   );
 }

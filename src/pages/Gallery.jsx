@@ -12,7 +12,7 @@ export default function Gallery() {
     Images.pic5,
     Images.pic6,
     Images.pic7,
-    
+    Images.pic8,
     
 
   ];

@@ -18,7 +18,7 @@ export { default as pic4 } from "./pic-4.png";
 export { default as pic5 } from "./pic-5.png";
 export { default as pic6 } from "./pic-6.png";
 export { default as pic7 } from "./pic-7.png";
-// export { default as pic8 } from "./pic-8.jpg";
+export { default as pic8 } from "./pic-8.png";
 // export { default as pic9 } from "./pic-9.jpg";
 // export { default as pic10 } from "./pic-10.jpg";
 // export { default as pic11 } from "./pic-11.jpg";
@@ -58,8 +58,8 @@ export { default as productEleven } from "./product-11.jpg";
 export { default as productTwelve } from "./product-12.jpg";
 
 // Social Media Icons
-export { default as facebookIcon } from "./facebook-icon.svg";
-export { default as instagramIcon } from "./instagram-icon.svg";
+export { default as facebookIcon } from "./facebook-icon.png";
+export { default as instagramIcon } from "./instagram-icon.png";
 
 //back-to-top button
 

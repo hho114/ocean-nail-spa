@@ -217,12 +217,12 @@ const serviceDetailsMobile = {
   "addition services": [
     {
       name: "Finger Nails Color Change / with Gel",
-      price: "$12 / $22",
+      price: "$15 / $22",
       description: "Change the color of your fingernails with an option for gel polish."
     },
     {
       name: "Toe Nails Color Change / with Gel",
-      price: "$12 / $23",
+      price: "$15 / $22",
       description: "Freshen up your toes with a new polish color with gel option available."
     },
     {

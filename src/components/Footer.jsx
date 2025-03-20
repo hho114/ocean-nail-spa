@@ -31,30 +31,31 @@ export default function Footer() {
           <div className="address-container flex flex-col gap-4">
             <h4 className="text-lg font-bold uppercase">Address</h4>
             <h5>Ocean Nail Spa</h5>
+            
             <p className="w-2/3 flex items-center gap-2 ">
-            <img 
+            {/* <img 
                 src={Images.locationIcon} 
                 alt="phone icon" 
                 className="w-5 h-5" 
-              />
+              /> */}
               Address: {""}
               <a
                 href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-               1777 George Washington Memorial Hwy, Gloucester Point, VA 23062
+              1777 George Washington Memorial Hwy, Gloucester Point, VA 23062
               </a>
             </p>
           </div>
           <div className="contact-container flex flex-col gap-4 pb-10">
             <h4 className="text-lg font-bold uppercase">Contact</h4>
             <p className="w-2/3 flex items-center gap-2">
-               <img 
+               {/* <img 
                 src={Images.phoneIcon} 
                 alt="phone icon" 
                 className="w-5 h-5" 
-              />
+              /> */}
               Phone #: <a href="tel:+1 804 684 5086">(804) 684 - 5086</a>
             </p>
             {/* <p className="w-auto">

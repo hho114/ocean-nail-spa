@@ -293,16 +293,16 @@ export default function Home() {
           href="tel:+1 804 684 5086"
           className="hover-button call-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
         >
-          Call Us
+          📞 Call Us
         </a>
 
         <a
           href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover-button directions-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
+          className="hover-button directions-button inline-block px-6 py-3 mx-4 dark:text-white rounded-full"
         >
-          Get Directions
+          📍 Get Directions
         </a>
       </div>
 
@@ -325,22 +325,22 @@ export default function Home() {
                   onClick={() => toggleDescription(`${categoryIndex}-${index}`)}
                 >
                   <div className="flex justify-between items-center">
-                    <h4 className="theme-text font-bold text-black dark:text-white">
+                    <h4 className="theme-text font-bold  dark:text-white">
                       {service.name}
                     </h4>
                     <div className="flex items-center">
-                      <h4 className="theme-text text-black dark:text-white">
+                      <h4 className="theme-text  dark:text-white">
                         {service.price}
                       </h4>
                       {service.description && (
-                        <span className="theme-text ml-4 text-xl text-black dark:text-white">
+                        <span className="theme-text ml-4 text-xl dark:text-white">
                           {expanded[`${categoryIndex}-${index}`] ? "\u25B2" : "\u25BC"}
                         </span>
                       )}
                     </div>
                   </div>
                   {expanded[`${categoryIndex}-${index}`] && service.description && (
-                    <p className="theme-text mt-2 text-black dark:text-white text-xs">
+                    <p className="theme-text mt-2  dark:text-white text-xs">
                       {service.description}
                     </p>
                   )}

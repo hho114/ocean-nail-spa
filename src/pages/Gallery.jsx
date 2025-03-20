@@ -1,231 +1,4 @@
-// import React, { useState, useEffect } from "react";
-// import { Button } from "flowbite-react";
-// import * as Images from "../assets/images/index";
-// import SocialIcon from "../components/SocialIcon";
-// import Stories from "react-insta-stories";
 
-
-// export default function Gallery() {
-//   const images = [
-//     Images.pic1,
-//     Images.pic2,
-//     Images.pic3,
-//     Images.pic4,
-//     Images.pic5,
-//     Images.pic6,
-//     Images.pic7,
-//     Images.pic8,
-//     Images.pic9,
-//     Images.pic10,
-//     Images.pic11,
-//     Images.pic12,
-//     Images.pic13,
-//   ];
-
-//   const initialVisibleImages = 9;
-//   const [visibleImages, setVisibleImages] = useState(initialVisibleImages);
-//   const [isSpinning, setIsSpinning] = useState(false);
-//   const [isStoryOpen, setIsStoryOpen] = useState(false);
-//   const [selectedStory, setSelectedStory] = useState([]);
-//   const [currentStoryIndex, setCurrentStoryIndex] = useState(0); // Track current story index
-
-//   useEffect(() => {
-//     if (!isStoryOpen) {
-//       openStory();
-//     }
-//   }, []);
-
-//   const openStory = () => {
-//     const storyData = images.map((img) => ({ url: img }));
-//     setSelectedStory(storyData);
-//     setCurrentStoryIndex(0); // Reset to first story
-//     setIsStoryOpen(true);
-//   };
-
-//   const closeStory = () => {
-//     setIsStoryOpen(false);
-//   };
-
-//   const loadMoreImages = () => {
-//     setIsSpinning(true);
-//     setTimeout(() => {
-//       setVisibleImages((prev) => prev + 9);
-//       setIsSpinning(false);
-//     }, 1000);
-//   };
-
-//   // Navigate to the previous story
-//   const goToPreviousStory = () => {
-//     if (currentStoryIndex > 0) {
-//       setCurrentStoryIndex(currentStoryIndex - 1);
-//     }
-//   };
-
-//   // Navigate to the next story
-//   const goToNextStory = () => {
-//     if (currentStoryIndex < selectedStory.length - 1) {
-//       setCurrentStoryIndex(currentStoryIndex + 1);
-//     } else {
-//       closeStory(); // Close if it's the last story
-//     }
-//   };
-
-  
-
-//   return (
-//     <div>
-//       {/* Banner */}
-//       <div className="cta-image-container mobile:h-3/5">
-//         <img src={Images.bannerGallery} alt="gallery-banner" loading="lazy" />
-//       </div>
-//       <div className="hover-buttons-container text-center mt-10">
-//         <a
-//           href="tel:+1 804 684 5086"
-//           className="hover-button call-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
-//         >
-//           Call Us
-//         </a>
-
-//         <a
-//           href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           className="hover-button directions-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
-//         >
-//           Get Directions
-//         </a>
-//       </div>
-
-//       {/* Auto-opening Stories (No visible circles) */}
-//       {isStoryOpen && (
-//         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
-          
-//           {/* Left Arrow Button - Navigate Previous Story */}
-//           {currentStoryIndex > 0 && (
-//             <button
-//               className="absolute left-5 text-white text-3xl bg-gray-800 bg-opacity-70 rounded-full p-4 z-[9999]"
-//               onClick={goToPreviousStory}
-//             >
-//               ◀
-//             </button>
-//           )}
-
-//           {/* Right Arrow Button - Navigate Next Story */}
-//           {currentStoryIndex < selectedStory.length - 1 && (
-//             <button
-//               className="absolute right-5 text-white text-3xl bg-gray-800 bg-opacity-70 rounded-full p-4 z-[9999]"
-//               onClick={goToNextStory}
-//             >
-//               ▶
-//             </button>
-//           )}
-
-//           {/* Close (X) and Share Buttons - Positioned Outside the Story Viewer */}
-//           <div className="absolute top-5 right-5 flex gap-4 z-[9999] pointer-events-auto">
-            
-//             {/* Close (X) Button */}
-//             <button
-//               className="text-white text-2xl bg-gray-800 bg-opacity-70 rounded-full p-4"
-//               onClick={closeStory}
-//             >
-//               <img 
-//                   src={Images.closeIcon} 
-//                   alt="share icon" 
-//                   className="w-7 h-7" 
-//                 />
-//             </button>
-
-//             {/* Share Button */}
-//             {/* <button
-//               className="text-white text-2xl bg-gray-800 bg-opacity-70 rounded-full p-4"
-//               onClick={() => alert("Share functionality coming soon!")}
-//             >
-//               <img 
-//                   src={Images.shareIcon} 
-//                   alt="share icon" 
-//                   className="w-7 h-7" 
-//                 />
-//             </button> */}
-           
-            
-//           </div>
-
-//           <div className="absolute bottom-20 right-5 flex gap-4 z-[9999] pointer-events-auto">
-//           <a
-//     href="tel:+1 804 684 5086"
-//     className="hover-button call-button flex items-center px-6 py-3 mx-4 text-black dark:text-white rounded-full gap-2"
-//   >
-//     <img 
-//       src={Images.phoneIcon} 
-//       alt="phone icon" 
-//       className="w-7 h-7" 
-//     />
-//     <span>Book Your Appointment</span>
-//   </a>
-//           </div>
-          
-
-//           {/* Stories Viewer */}
-//           <div className="relative w-[380px] h-[700px] bg-black rounded-lg shadow-lg flex items-center">
-//           <Stories
-//               stories={selectedStory}
-//               defaultInterval={3000} // 3 seconds per story
-//               width="100%"
-//               height="100%"
-//               currentIndex={currentStoryIndex} // Track current index
-//               onStoryStart={(index) => setCurrentStoryIndex(index)} // Update when story starts
-//               onStoryEnd={() => {
-//                 if (currentStoryIndex < selectedStory.length - 1) {
-//                   setCurrentStoryIndex((prevIndex) => prevIndex + 1); // Move to next story
-//                 } else {
-//                   closeStory(); // Close after last story
-//                 }
-//               }}
-//               onAllStoriesEnd={closeStory} // Close modal when all stories finish
-//             />
-//           </div>
-//         </div>
-//       )}
-
-//       {/* Gallery Section */}
-//       <div className="gallery-container pt-20 mx-auto mb-36 mobile:w-screen">
-//         <div className="collection-container mx-auto grid desktop:grid-cols-3 mobile:grid-cols-1 gap-4">
-//           {images.slice(0, visibleImages).map((image, index) => (
-//             <div key={index}>
-//               <img
-//                 className="gallery-image max-w-full desktop:h-auto mobile:h-full mobile:w-full rounded-lg"
-//                 src={image}
-//                 alt=""
-//                 loading="lazy"
-//               />
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* Load More Button */}
-//         {visibleImages < images.length && (
-//           <div className="flex justify-center mt-6">
-//             <Button
-//               color="dark"
-//               className={`text-sm ${isSpinning ? "animate-spin" : ""}`}
-//               onClick={loadMoreImages}
-//             >
-//               {isSpinning ? "Loading..." : "Load more"}
-//             </Button>
-//           </div>
-//         )}
-//       </div>
-
-//       {/* Follow Us Section */}
-//       <div className="flex flex-col gallery-icon-container p-10 items-center">
-//         <h2 className="text-3xl">Follow us on</h2>
-//         <div>
-//           <SocialIcon />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 import React, { useState, useEffect } from "react";
 import { Button } from "flowbite-react";
@@ -317,6 +90,7 @@ export default function Gallery() {
         <img src={Images.bannerGallery} alt="gallery-banner" loading="lazy" />
       </div>
 
+      
       {/* Auto-opening Stories */}
       {isStoryOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
@@ -355,11 +129,7 @@ export default function Gallery() {
             href="tel:+1 804 684 5086"
             className="hover-button call-button flex items-center px-6 py-3 mx-4 text-black dark:text-white rounded-full gap-2"
           >
-            <img 
-              src={Images.phoneIcon} 
-              alt="phone icon" 
-              className="w-7 h-7" 
-            />
+            📞
             <span>Book Your Appointment</span>
           </a>
         </div>
@@ -434,6 +204,25 @@ export default function Gallery() {
             </Button>
           </div>
         )}
+      </div>
+      
+      {/* Hover Buttons Section */}
+      <div className="hover-buttons-container text-center mt-10">
+        <a
+          href="tel:+1 804 684 5086"
+          className="hover-button call-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
+        >
+          📞 Call Us
+        </a>
+
+        <a
+          href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover-button directions-button inline-block px-6 py-3 mx-4 dark:text-white rounded-full"
+        >
+          📍 Get Directions
+        </a>
       </div>
 
       {/* Follow Us Section */}

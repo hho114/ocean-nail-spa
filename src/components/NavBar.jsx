@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import storeLogo from "../assets/images/store-logo.png";
-// import { Button } from "flowbite-react";
+import * as Images from "../assets/images/index";
+
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,13 +81,21 @@ export default function NavBar() {
         </NavLink>
 
         <NavLink
-          to="/contactUs"
+          to="/aboutUs"
           // style={({ isActive }) => (isActive ? activeStyles : null)}
           className={({ isActive }) => `whitespace-nowrap nav-link ${isActive ? 'active' : ''}`}
           // className="whitespace-nowrap"
         >
-          Contact Us
+          About Us
         </NavLink>
+
+        <a
+  href="tel:+1 804 684 5086"
+  className="hover-button call-button flex items-center justify-center px-6 py-3 mx-4 text-black dark:text-white rounded-full gap-2 bg-blue-200"
+>
+📞
+  <span className="whitespace-nowrap">Call & Book Now</span>
+</a>
         
       </nav>
     </div>

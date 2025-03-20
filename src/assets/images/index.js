@@ -8,8 +8,6 @@ export { default as bannerStory } from "./bannerStory.png";
 export { default as bannerService } from "./bannerService.png";
 export { default as bannerGallery } from "./bannerGallery.png";
 export { default as barcodeMenu } from "./menu-qr.png";
-export { default as phoneIcon } from "./phoneIcon.png";
-export { default as locationIcon } from "./locationIcon.png";
 export { default as shareIcon } from "./iconShare.png";
 export { default as closeIcon } from "./iconClose.png";
 // Gallery

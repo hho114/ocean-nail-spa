@@ -122,12 +122,12 @@ export default function AboutUs() {
               <p className="text-lg md:text-xl">{"⭐".repeat(review.stars)}</p>
 
               {/* Review Text */}
-              <p className="theme-text mt-2 text-sm md:text-lg leading-relaxed break-words">
+              <p className="mt-2 text-sm md:text-lg leading-relaxed break-words">
                 {review.description}
               </p>
 
               {/* Reviewer Name */}
-              <p className="theme-text mt-4 font-semibold text-sm md:text-lg">
+              <p className="mt-4 font-semibold text-sm md:text-lg">
                 - {review.name}
               </p>
 

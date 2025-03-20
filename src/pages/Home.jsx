@@ -288,7 +288,7 @@ export default function Home() {
       </div>
 
       {/* Hover Buttons Section */}
-      <div className="hover-buttons-container text-center mt-10">
+      {/* <div className="hover-buttons-container text-center mt-10">
         <a
           href="tel:+1 804 684 5086"
           className="hover-button call-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
@@ -304,7 +304,7 @@ export default function Home() {
         >
           📍 Get Directions
         </a>
-      </div>
+      </div> */}
 
       <h2 className="text-center py-6 text-4xl">Our Services</h2>
       <p className="text-center italic pb-8">

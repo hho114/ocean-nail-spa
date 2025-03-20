@@ -59,6 +59,7 @@ export default function NavBar() {
           </svg>
         </button>
       </div>
+  
 
       {/* Navigation Links */}
       <nav
@@ -89,13 +90,7 @@ export default function NavBar() {
           About Us
         </NavLink>
 
-        <a
-  href="tel:+1 804 684 5086"
-  className="hover-button call-button flex items-center justify-center px-6 py-3 mx-4 text-black dark:text-white rounded-full gap-2 bg-blue-200"
->
-📞
-  <span className="whitespace-nowrap">Call & Book Now</span>
-</a>
+       
         
       </nav>
     </div>

@@ -205,9 +205,8 @@ export default function Gallery() {
           </div>
         )}
       </div>
-      
       {/* Hover Buttons Section */}
-      <div className="hover-buttons-container text-center mt-10">
+      {/* <div className="hover-buttons-container text-center mt-10">
         <a
           href="tel:+1 804 684 5086"
           className="hover-button call-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
@@ -223,8 +222,8 @@ export default function Gallery() {
         >
           📍 Get Directions
         </a>
-      </div>
-
+      </div> */}
+      
       {/* Follow Us Section */}
       <div className="flex flex-col gallery-icon-container p-10 items-center">
         <h2 className="text-3xl">Follow us on</h2>

@@ -100,30 +100,43 @@ export default function AboutUs() {
         </p>
       </div>
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 px-4 w-full">
       <h2 className="theme-text text-3xl font-bold">What Our Clients Say</h2>
-      <p className="theme-text ">Real reviews from happy customers!</p>
+      <p className="theme-text text-base md:text-lg">
+        Real reviews from happy customers!
+      </p>
 
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         loop={true}
-        spaceBetween={20}
+        spaceBetween={10}
         slidesPerView={1}
-        className="mt-6 max-w-lg mx-auto"
+        className="mt-6 w-full max-w-[95%] md:max-w-2xl"
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
-            <div className="p-6 bg-gray-800 text-white rounded-lg shadow-lg">
-              <p className="text-lg">{"⭐".repeat(review.stars)}</p>
-              <p className="theme-text mt-2">{review.description}</p>
-              <p className="theme-text mt-4 font-semibold">- {review.name}</p>
+            <div className="p-4 md:p-6 bg-gray-800 text-white rounded-lg shadow-lg w-full max-w-full mx-auto">
+              {/* Star Rating */}
+              <p className="text-lg md:text-xl">{"⭐".repeat(review.stars)}</p>
+
+              {/* Review Text */}
+              <p className="theme-text mt-2 text-sm md:text-lg leading-relaxed break-words">
+                {review.description}
+              </p>
+
+              {/* Reviewer Name */}
+              <p className="theme-text mt-4 font-semibold text-sm md:text-lg">
+                - {review.name}
+              </p>
+
+              {/* Google Review Link */}
               <a
                 href={review.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 underline mt-2 block"
+                className="text-blue-400 underline mt-2 block text-sm md:text-base"
               >
                 View on Google Map
               </a>
@@ -133,26 +146,8 @@ export default function AboutUs() {
       </Swiper>
     </div>
 
-      {/* Call-to-Action Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mt-8">
-        {/* Call Button */}
-        <a
-          href="tel:+1 804 684 5086"
-          className="hover-button flex items-center justify-center px-6 py-3 text-white rounded-full shadow-lg"
-        >
-          📞 Call Us
-        </a>
+      
 
-        {/* Directions Button */}
-        <a
-          href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover-button flex items-center justify-center px-6 py-3 text-white rounded-full shadow-lg"
-        >
-          📍 Get Directions
-        </a>
-      </div>
     </div>
   );
 }

@@ -90,8 +90,7 @@ export default function Gallery() {
         <img src={Images.bannerGallery} alt="gallery-banner" loading="lazy" />
       </div>
 
-      
-      {/* Auto-opening Stories */}
+  {/* Auto-opening Stories */}
 {isStoryOpen && (
   <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
     {/* Left Arrow Button - Navigate Previous Story */}
@@ -147,7 +146,7 @@ export default function Gallery() {
           if (currentStoryIndex < Math.min(4, selectedStory.length) - 1) {
             setCurrentStoryIndex((prevIndex) => prevIndex + 1); // Move to next story
           } else {
-            closeStory(); // Close after last story
+            closeStory(); // Close when last story finishes
           }
         }}
         onAllStoriesEnd={closeStory} // Close modal when all stories finish

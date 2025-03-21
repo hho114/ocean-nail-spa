@@ -92,69 +92,69 @@ export default function Gallery() {
 
       
       {/* Auto-opening Stories */}
-      {isStoryOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
-          {/* Left Arrow Button - Navigate Previous Story */}
-          {currentStoryIndex > 0 && (
-            <button
-              className="absolute left-5 text-white text-3xl bg-gray-800 bg-opacity-70 rounded-full p-4 z-[9999]"
-              onClick={goToPreviousStory}
-            >
-              ◀
-            </button>
-          )}
+{isStoryOpen && (
+  <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+    {/* Left Arrow Button - Navigate Previous Story */}
+    {currentStoryIndex > 0 && (
+      <button
+        className="absolute left-5 text-white text-3xl bg-gray-800 bg-opacity-70 rounded-full p-4 z-[9999]"
+        onClick={goToPreviousStory}
+      >
+        ˂
+      </button>
+    )}
 
-          {/* Right Arrow Button - Navigate Next Story */}
-          {currentStoryIndex < selectedStory.length - 1 && (
-            <button
-              className="absolute right-5 text-white text-3xl bg-gray-800 bg-opacity-70 rounded-full p-4 z-[9999]"
-              onClick={goToNextStory}
-            >
-              ▶
-            </button>
-          )}
+    {/* Right Arrow Button - Navigate Next Story */}
+    {currentStoryIndex < Math.min(4, selectedStory.length) - 1 && (
+      <button
+        className="absolute right-5 text-white text-3xl bg-gray-800 bg-opacity-70 rounded-full p-4 z-[9999]"
+        onClick={goToNextStory}
+      >
+        ˃
+      </button>
+    )}
 
-          {/* Close (X) Button */}
-          <div className="absolute top-5 right-5 flex gap-4 z-[9999] pointer-events-auto">
-            <button
-              className="text-white text-2xl bg-gray-800 bg-opacity-70 rounded-full p-4"
-              onClick={closeStory}
-            >
-              ✕
-            </button>
-          </div>
+    {/* Close (X) Button */}
+    <div className="absolute top-5 right-5 flex gap-4 z-[9999] pointer-events-auto">
+      <button
+        className="text-white text-2xl bg-gray-800 bg-opacity-70 rounded-full p-4"
+        onClick={closeStory}
+      >
+        ✕
+      </button>
+    </div>
 
-        <div className="absolute bottom-20 right-5 flex gap-4 z-[9999] pointer-events-auto">
-          <a
-            href="tel:+1 804 684 5086"
-            className="hover-button call-button flex items-center px-6 py-3 mx-4 text-black dark:text-white rounded-full gap-2"
-          >
-            📞
-            <span>Book Your Appointment</span>
-          </a>
-        </div>
+    <div className="absolute bottom-20 right-5 flex gap-4 z-[9999] pointer-events-auto">
+      <a
+        href="tel:+1 804 684 5086"
+        className="hover-button call-button flex items-center px-6 py-3 mx-4 text-black dark:text-white rounded-full gap-2"
+      >
+        📞
+        <span>Book Your Appointment</span>
+      </a>
+    </div>
 
-                    {/* Stories Viewer */}
+    {/* Stories Viewer */}
     <div className="relative w-[380px] h-[700px] bg-black rounded-lg shadow-lg flex items-center">
-          <Stories
-              stories={selectedStory}
-              defaultInterval={3000} // 3 seconds per story
-              width="100%"
-              height="100%"
-              currentIndex={currentStoryIndex} // Track current index
-              onStoryStart={(index) => setCurrentStoryIndex(index)} // Update when story starts
-              onStoryEnd={() => {
-                if (currentStoryIndex < selectedStory.length - 1) {
-                  setCurrentStoryIndex((prevIndex) => prevIndex + 1); // Move to next story
-                } else {
-                  closeStory(); // Close after last story
-                }
-              }}
-              onAllStoriesEnd={closeStory} // Close modal when all stories finish
-            />
-          </div>
-        </div>
-      )}
+      <Stories
+        stories={selectedStory.slice(-4)} // Only pass last 4 images
+        defaultInterval={3000} // 3 seconds per story
+        width="100%"
+        height="100%"
+        currentIndex={currentStoryIndex} // Track current index
+        onStoryStart={(index) => setCurrentStoryIndex(index)} // Update when story starts
+        onStoryEnd={() => {
+          if (currentStoryIndex < Math.min(4, selectedStory.length) - 1) {
+            setCurrentStoryIndex((prevIndex) => prevIndex + 1); // Move to next story
+          } else {
+            closeStory(); // Close after last story
+          }
+        }}
+        onAllStoriesEnd={closeStory} // Close modal when all stories finish
+      />
+    </div>
+  </div>
+)}
 
       {/* Image Popup Modal (Only for Desktop) */}
       {selectedImage && (

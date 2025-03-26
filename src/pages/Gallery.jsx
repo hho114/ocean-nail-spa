@@ -21,6 +21,16 @@ export default function Gallery() {
     Images.pic11,
     Images.pic12,
     Images.pic13,
+    Images.pic14,
+    Images.pic15,
+    Images.pic16,
+    Images.pic17,
+    Images.pic18,
+    Images.pic19,
+    Images.pic20,
+    Images.pic21,
+    Images.pic22,
+
   ];
 
   const initialVisibleImages = 9;
@@ -171,6 +181,7 @@ export default function Gallery() {
               alt="Selected"
               className="rounded-lg"
               style={{ maxWidth: "100%", maxHeight: "100vh", objectFit: "contain" }}
+              loading="lazy"
             />
           </div>
         </div>

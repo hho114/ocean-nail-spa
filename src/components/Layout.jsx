@@ -46,6 +46,8 @@ export default function Layout() {
           src={Images.arrowUp}
           alt="Back-to-Top"
           className="back-to-top__image"
+          loading="lazy"
+
         />
       </Link>
     </div>

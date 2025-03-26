@@ -30,6 +30,7 @@ export default function NavBar() {
               className="desktop:w-2/12 mobile:w-3/12 rounded-full logo"
               src={storeLogo}
               alt="dark-logo"
+              loading="lazy"
             />
           </a>
         </div>

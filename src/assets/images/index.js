@@ -24,15 +24,15 @@ export { default as pic10 } from "./pic-10.png";
 export { default as pic11 } from "./pic-11.png";
 export { default as pic12 } from "./pic-12.png";
 export { default as pic13 } from "./pic-13.png";
-// export { default as pic14 } from "./pic-14.jpg";
-// export { default as pic15 } from "./pic-15.jpg";
-// export { default as pic16 } from "./pic-16.jpg";
-// export { default as pic17 } from "./pic-17.jpg";
-// export { default as pic18 } from "./pic-18.jpg";
-// export { default as pic19 } from "./pic-19.jpg";
-// export { default as pic20 } from "./pic-20.jpg";
-// export { default as pic21 } from "./pic-21.jpg";
-// export { default as pic22 } from "./pic-22.jpg";
+export { default as pic14 } from "./pic-14.png";
+export { default as pic15 } from "./pic-15.png";
+export { default as pic16 } from "./pic-16.png";
+export { default as pic17 } from "./pic-17.png";
+export { default as pic18 } from "./pic-18.png";
+export { default as pic19 } from "./pic-19.png";
+export { default as pic20 } from "./pic-20.png";
+export { default as pic21 } from "./pic-21.png";
+export { default as pic22 } from "./pic-22.png";
 // export { default as pic23 } from "./pic-23.jpg";
 // export { default as pic24 } from "./pic-24.jpg";
 // export { default as pic25 } from "./pic-25.jpg";
@@ -44,18 +44,14 @@ export { default as pic13 } from "./pic-13.png";
 
 
 // Products slideshow in Home Page
-export { default as productOne } from "./product-1.webp";
-export { default as productTwo } from "./product-2.webp";
-export { default as productThree } from "./product-3.webp";
-export { default as productFour } from "./product-4.webp";
-export { default as productFive } from "./product-5.jpg";
-export { default as productSix } from "./product-6.jpg";
-export { default as productSeven } from "./product-7.png";
-export { default as productEight } from "./product-8.jpg";
-export { default as productNine } from "./product-9.jpg";
-export { default as productTen } from "./product-10.jpg";
-export { default as productEleven } from "./product-11.jpg";
-export { default as productTwelve } from "./product-12.jpg";
+export { default as product1 } from "./product-1.webp";
+export { default as product2 } from "./product-2.webp";
+export { default as product3 } from "./product-3.png";
+export { default as product4 } from "./product-4.webp";
+export { default as product5 } from "./product-5.jpg";
+export { default as product6 } from "./product-6.png";
+
+
 
 // Social Media Icons
 export { default as facebookIcon } from "./facebook-icon.png";

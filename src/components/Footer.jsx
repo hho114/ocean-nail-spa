@@ -70,7 +70,8 @@ export default function Footer() {
         <div className="business-hour-container flex flex-col gap-10">
           <h3 className="text-2xl">Business hours</h3>
           <ul className="flex flex-col gap-4">
-            <li>Mon-Fri: 10am - 7pm</li>
+            <li>Mon,Wed,Thur,Fri: 10am - 7pm</li>
+            <li>Tue: Temporarily Closed</li>
             <li>Sat: 10am - 5pm</li>
             <li>Sun: 12pm - 5pm</li>
             {/* <li>Opening soon</li> */}

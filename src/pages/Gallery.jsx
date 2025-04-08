@@ -2,36 +2,50 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "flowbite-react";
-import * as Images from "../assets/images/index";
+// import * as Images from "../assets/images/index";
 import SocialIcon from "../components/SocialIcon";
 import Stories from "react-insta-stories";
 
 export default function Gallery() {
-  const images = [
-    Images.pic1,
-    Images.pic2,
-    Images.pic3,
-    Images.pic4,
-    Images.pic5,
-    Images.pic6,
-    Images.pic7,
-    Images.pic8,
-    Images.pic9,
-    Images.pic10,
-    Images.pic11,
-    Images.pic12,
-    Images.pic13,
-    Images.pic14,
-    Images.pic15,
-    Images.pic16,
-    Images.pic17,
-    Images.pic18,
-    Images.pic19,
-    Images.pic20,
-    Images.pic21,
-    Images.pic22,
+  // const images = [
+  //   Images.pic1,
+  //   Images.pic2,
+  //   Images.pic3,
+  //   Images.pic4,
+  //   Images.pic5,
+  //   Images.pic6,
+  //   Images.pic7,
+  //   Images.pic8,
+  //   Images.pic9,
+  //   Images.pic10,
+  //   Images.pic11,
+  //   Images.pic12,
+  //   Images.pic13,
+  //   Images.pic14,
+  //   Images.pic15,
+  //   Images.pic16,
+  //   Images.pic17,
+  //   Images.pic18,
+  //   Images.pic19,
+  //   Images.pic20,
+  //   Images.pic21,
+  //   Images.pic22,
+  //   Images.pic23,
+  //   Images.pic24,
+  //   Images.pic25,
+  //   Images.pic26,
+  //   Images.pic27,
+  //   Images.pic28,
+  //   Images.pic29,
+  //   Images.pic30,
+  //   Images.pic31,
 
-  ];
+  // ];
+
+
+
+  const images = Array.from({ length: 31 }, (_, i) => `${import.meta.env.VITE_CDN_IMAGE_BASE}/pic-${i + 1}.png`);
+  // const bannerGallery = `${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerGallery.png`;
 
   const initialVisibleImages = 9;
   const [visibleImages, setVisibleImages] = useState(initialVisibleImages);
@@ -97,7 +111,7 @@ export default function Gallery() {
     <div>
       {/* Banner */}
       <div className="cta-image-container mobile:h-3/5">
-        <img src={Images.bannerGallery} alt="gallery-banner" loading="lazy" />
+        <img src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerGallery.png`} alt="gallery-banner" loading="lazy" />
       </div>
 
   {/* Auto-opening Stories */}

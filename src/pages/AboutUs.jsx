@@ -169,53 +169,9 @@ export default function AboutUs() {
 
 
 
-{/* Product Slider Section
-<div className="text-center mt-10 px-4 w-full">
-  <h2 className="theme-text text-3xl font-bold">We Use Quality Products</h2>
-  <p className="theme-text text-base md:text-lg">
-  We are proud to use top-of-the-line products to ensure your nails always look stunning and last longer. Relax and enjoy knowing you’re in expert hands!
-  </p>
 
-  <Swiper
-    modules={[Autoplay, Pagination]}
-    autoplay={{ delay: 5000, disableOnInteraction: false }}
-    pagination={{ clickable: true }}
-    loop={true}
-    spaceBetween={10}
-    slidesPerView={1}
-    className="mt-6 w-full max-w-[95%] md:max-w-2xl"
-  >
-    {productImages.map((img, index) => (
-      <SwiperSlide key={index}>
-      <div className="p-4 md:p-6 text-white rounded-lg shadow-lg w-full max-w-full mx-auto">
-        <img
-          src={img}
-          alt={`Product ${index + 1}`}
-          className="rounded-lg w-full max-w-xs md:max-w-md h-auto shadow-md mx-auto"
-        />
-      </div>
-    </SwiperSlide>
-    ))}
-  </Swiper>
-</div> */}
 
-{/* <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Nail Color Chart</h2>
-      <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-4">
-        {nailColors.map((item) => (
-          <div
-            key={item.number}
-            className="flex flex-col items-center justify-center p-2 border rounded"
-          >
-            <div
-              className="w-12 h-12 rounded-full mb-2 shadow-md"
-              style={{ backgroundColor: item.hex }}
-            />
-            <p className="text-sm font-semibold">#{item.number}</p>
-          </div>
-        ))}
-      </div>
-    </div> */}
+
 
       
 

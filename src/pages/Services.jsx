@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import * as Images from "../assets/images/index";
+// import * as Images from "../assets/images/index";
 
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -105,7 +105,8 @@ export default function Services() {
             <div className="all-services-container">
       <div className="cta-image-container mb-10 mobile:h-3/5">
         <img
-          src={Images.bannerService}
+          // src={Images.bannerService}
+          src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerService.png`}
           alt="service-banner"
           loading="lazy"
         />
@@ -135,7 +136,8 @@ export default function Services() {
           <div className="service-wrapper flex flex-col items-center h-auto">
       <div className="cta-image-container mb-10 mobile:h-3/5">
         <img
-          src={Images.bannerService}
+          // src={Images.bannerService}
+          src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerService.png`}
           alt="gallery-banner"
           loading="lazy"
         />
@@ -191,100 +193,5 @@ export default function Services() {
       )}
     </div>
   );
-  // if (isMobile) {
-  //   console.log("Is mobile:", isMobile);
-  //   // Mobile: Display all services on one page
-  //   return (
-      
-  //     <div className="all-services-container">
-  //     <div className="cta-image-container mb-10 mobile:h-3/5">
-  //       <img
-  //         src={Images.bannerService}
-  //         alt="service-banner"
-  //         loading="lazy"
-  //       />
-  //     </div>
-  //     <h2 className="text-center py-6 text-4xl">Our Services</h2>
-  //     <p className="text-center italic pb-8">
-  //       Explore our wide range of services tailored to meet all your beauty
-  //       needs.
-  //     </p>
-  //     {Object.entries(serviceDetails).map(([category, services], categoryIndex) => (
-  //       <div key={categoryIndex} className="service-category-container py-6">
-  //         <h3 className="text-2xl text-center py-4 uppercase font-bold">
-  //           {capitalizeFirstLetter(category)}
-  //         </h3>
-  //         <div className="price-detail-container flex flex-col gap-8 py-4">
-  //           {services.map((service, index) => (
-  //             <div className="flex w-3/4 justify-between mx-auto" key={index}>
-  //               <h4 className="uppercase font-bold">{service.name}</h4>
-  //               <h4>{service.price}</h4>
-  //             </div>
-  //           ))}
-  //         </div>
-  //       </div>
-  //     ))}
-  //   </div>
-  //   );
-  // }
-
-  // Desktop: Use category-based navigation
-  // return (
-  //   <div className="service-wrapper flex flex-col items-center h-auto">
-  //     <div className="cta-image-container mb-10 mobile:h-3/5">
-  //       <img
-  //         src={Images.bannerService}
-  //         alt="gallery-banner"
-  //         loading="lazy"
-  //       />
-  //     </div>
-  //     <div className="service-link-container">
-  //       <nav className="flex mobile:flex-wrap mobile:justify-center desktop:gap-6 mobile:gap-8 pt-10 mobile:pb-4 uppercase">
-  //         <NavLink
-  //           style={({ isActive }) => (isActive ? activeStyles : null)}
-  //           to="/services/manicure and pedicure"
-  //         >
-  //           Manicure and Pedicure
-  //         </NavLink>
-
-  //         <NavLink
-  //           style={({ isActive }) => (isActive ? activeStyles : null)}
-  //           to="/services/nail enhancement"
-  //         >
-  //           Nail Enhancement
-  //         </NavLink>
-
-  //         <NavLink
-  //           style={({ isActive }) => (isActive ? activeStyles : null)}
-  //           to="/services/waxing"
-  //         >
-  //           Waxing
-  //         </NavLink>
-  //         <NavLink
-  //           style={({ isActive }) => (isActive ? activeStyles : null)}
-  //           to="/services/design"
-  //         >
-  //           Design
-  //         </NavLink>
-
-  //         <NavLink
-  //           style={({ isActive }) => (isActive ? activeStyles : null)}
-  //           to="/services/kids services"
-  //         >
-  //           Kids Services
-  //         </NavLink>
-
-  //         <NavLink
-  //           style={({ isActive }) => (isActive ? activeStyles : null)}
-  //           to="/services/addition services"
-  //         >
-  //           Addition Services
-  //         </NavLink>
-  //       </nav>
-  //     </div>
-  //     <div>
-  //       <Outlet />
-  //     </div>
-  //   </div>
-  // );
+ 
 }

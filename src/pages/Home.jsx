@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { NavLink, Outlet } from "react-router-dom";
-import * as Images from "../assets/images/index";
+// import * as Images from "../assets/images/index";
 
 const isDarkMode =
   window.matchMedia &&
@@ -269,6 +269,8 @@ const serviceDetailsMobile = {
 };
 
 export default function Home() {
+
+  // const CDN = process.env.VITE_CDN_IMAGE_BASE;
   const [expanded, setExpanded] = useState({});
 
   const toggleDescription = (index) => {
@@ -284,7 +286,7 @@ export default function Home() {
   return (
     <div className="all-services-container">
       <div className="cta-image-container mb-10 mobile:h-3/5">
-        <img src={Images.heroBanner} alt="service-banner" loading="lazy" />
+        <img src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/heroBanner.png`} alt="service-banner" loading="lazy" />
       </div>
 
       {/* Hover Buttons Section */}

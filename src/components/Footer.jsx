@@ -1,7 +1,9 @@
 import React from "react";
-import * as Images from "../assets/images/index";
+// import * as Images from "../assets/images/index";
 
 export default function Footer() {
+
+  
   return (
     <footer
       id="booking"

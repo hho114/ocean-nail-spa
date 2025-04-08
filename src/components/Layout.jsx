@@ -2,14 +2,13 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import * as Images from "../assets/images/index";
+// import * as Images from "../assets/images/index";
 import { Link } from "react-scroll";
 
 export default function Layout() {
   const backToTop = document.querySelector(".back-to-top");
   const [isBackToTop, setIsBackToTop] = React.useState(false);
-
-  // Conditionally render the button
+  
   function renderToTopButton(isBackToTop) {
     if (backToTop) {
       backToTop.style.visibility = isBackToTop ? "visible" : "hidden";
@@ -43,7 +42,7 @@ export default function Layout() {
         title="Back-to-Top"
       >
         <img
-          src={Images.arrowUp}
+          src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/arrow-up.svg`}
           alt="Back-to-Top"
           className="back-to-top__image"
           loading="lazy"

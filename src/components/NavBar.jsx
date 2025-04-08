@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import storeLogo from "../assets/images/store-logo.png";
-import * as Images from "../assets/images/index";
+// import storeLogo from "../assets/images/store-logo.png";
+// import * as Images from "../assets/images/index";
 
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
+  
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  
+  // const logoUrl = import.meta.env.VITE_CDN_IMAGE_BASE
+  // ? `${import.meta.env.VITE_CDN_IMAGE_BASE}/store-logo.png`
+  // : storeLogo;
  
   return (
     <div className="header-container w-3/4 mobile:w-11/12  mx-auto flex items-center justify-between mobile:justify-center">
@@ -28,7 +30,7 @@ export default function NavBar() {
           >
             <img
               className="desktop:w-2/12 mobile:w-3/12 rounded-full logo"
-              src={storeLogo}
+              src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/store-logo.png`}
               alt="dark-logo"
               loading="lazy"
             />

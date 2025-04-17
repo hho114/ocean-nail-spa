@@ -7,45 +7,9 @@ import SocialIcon from "../components/SocialIcon";
 import Stories from "react-insta-stories";
 
 export default function Gallery() {
-  // const images = [
-  //   Images.pic1,
-  //   Images.pic2,
-  //   Images.pic3,
-  //   Images.pic4,
-  //   Images.pic5,
-  //   Images.pic6,
-  //   Images.pic7,
-  //   Images.pic8,
-  //   Images.pic9,
-  //   Images.pic10,
-  //   Images.pic11,
-  //   Images.pic12,
-  //   Images.pic13,
-  //   Images.pic14,
-  //   Images.pic15,
-  //   Images.pic16,
-  //   Images.pic17,
-  //   Images.pic18,
-  //   Images.pic19,
-  //   Images.pic20,
-  //   Images.pic21,
-  //   Images.pic22,
-  //   Images.pic23,
-  //   Images.pic24,
-  //   Images.pic25,
-  //   Images.pic26,
-  //   Images.pic27,
-  //   Images.pic28,
-  //   Images.pic29,
-  //   Images.pic30,
-  //   Images.pic31,
+  
 
-  // ];
-
-
-
-  const images = Array.from({ length: 37 }, (_, i) => `${import.meta.env.VITE_CDN_IMAGE_BASE}/pic-${i + 1}.png`);
-  // const bannerGallery = `${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerGallery.png`;
+const images = Array.from({ length: 37 }, (_, i) => `${import.meta.env.VITE_CDN_IMAGE_BASE}/pic-${i + 1}.png`).reverse();  // const bannerGallery = `${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerGallery.png`;
 
   const initialVisibleImages = 9;
   const [visibleImages, setVisibleImages] = useState(initialVisibleImages);
@@ -160,7 +124,7 @@ export default function Gallery() {
     {/* Stories Viewer */}
     <div className="relative w-[380px] h-[700px] bg-black rounded-lg shadow-lg flex items-center">
       <Stories
-        stories={selectedStory.slice(-4)} // Only pass last 4 images
+        stories={selectedStory.slice(0, 4)} // Only pass last 4 images
         defaultInterval={3000} // 3 seconds per story
         width="100%"
         height="100%"

@@ -44,7 +44,7 @@ export default function Gallery() {
 
 
 
-  const images = Array.from({ length: 31 }, (_, i) => `${import.meta.env.VITE_CDN_IMAGE_BASE}/pic-${i + 1}.png`);
+  const images = Array.from({ length: 37 }, (_, i) => `${import.meta.env.VITE_CDN_IMAGE_BASE}/pic-${i + 1}.png`);
   // const bannerGallery = `${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerGallery.png`;
 
   const initialVisibleImages = 9;

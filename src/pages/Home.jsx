@@ -33,22 +33,22 @@ const serviceDetailsMobile = {
     {
       name: "Classic Pedicure / with Callus Removal",
       price: "$30 / $35",
-      description: "A soothing pedicure with exfoliation and callus removal, ensuring soft, well-groomed feet."
+      description: "Includes soaking your feet, nail shaping, cuticle care, gentle exfoliation with sugar scrub, massage, and finishing with a warm towel and polish."
     },
     {
       name: "Signature Spa Pedicure",
       price: "$40",
-      description: "An indulgent pedicure featuring a foot soak, exfoliation, massage, and moisturizing treatment."
+      description: "Includes a basic foot care while experiencing total relaxation with a luxurious scent package and callus treatment. This treatment includes a rejuvenating sugar scrub, nourishing massage cream, a soothing clay mask, and warm towels to restore tranquility and leave your feet feeling soft and refrehed.."
     },
     {
       name: "Deluxe Spa Pedicure",
       price: "$55",
-      description: "Pamper your feet with an extended spa experience, including aromatherapy, a hydrating mask, and hot towel wrap."
+      description: "Includes essential foot care paired with a Luxurious Scent package, Callus Treatment, Paraffin Wax, and Hot Stones. Experience the ultimate indulgence with the Deluxe Spa Pedicure treatment. Pamper your feet with a relaxing hot stone massage designed to soothe tired feet and aching legs while improving circulation."
     },
     {
       name: "Supreme Spa Pedicure",
       price: "$65",
-      description: "Our ultimate pedicure experience with extended massage, luxurious skincare products, and relaxation techniques."
+      description: "Experience the ultimate pedicure with organic products, callus treatment , and paraffin wax. Start with an Organic Salt soak to ease muscle pain, followed by a Sugar Scrub with organic oils for gentle exfoliation. Enjoy a relaxing hot stone massage under a steamer to boost circulation, then a foot mask for deep hydration. Finish with a hot towel wrap and nourishing paraffin wax, leaving your feet soft, smooth, and revitalized."
     },
   ],
   "nail enhancement": [

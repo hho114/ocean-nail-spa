@@ -75,8 +75,8 @@ export default function Footer() {
             <li>Mon - Fri: 10am - 7pm</li>
             {/* <li>Tue: Temporarily Closed</li> */}
             <li>Sat: 10am - 5pm</li>
-            {/* <li>Sun: 12pm - 5pm</li> */}
-            <li>Sun: Closed for Easter Holiday</li>
+            <li>Sun: 12pm - 5pm</li>
+            {/* <li>Sun: Closed for Easter Holiday</li> */}
             {/* <li>Opening soon</li> */}
             <li className="font-bold italic">*Holiday hours may be changed</li>
           </ul>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SocialIcon from "../components/SocialIcon";
 // import { NavLink, Outlet } from "react-router-dom";
 // import * as Images from "../assets/images/index";
 
@@ -378,6 +379,13 @@ export default function Home() {
           />
         </a>
       </div>
+
+      <div className="flex flex-col gallery-icon-container p-10 items-center">
+              <h2 className="text-3xl">Follow us on</h2>
+              <div>
+                <SocialIcon />
+              </div>
+            </div>
     </div>
   );
 }

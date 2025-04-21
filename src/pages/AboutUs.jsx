@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import SocialIcon from "../components/SocialIcon";
 // import * as Images from "../assets/images/index";
 
 export default function AboutUs() {
@@ -165,6 +166,15 @@ export default function AboutUs() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="flex flex-col gallery-icon-container p-10 items-center">
+              <h2 className="text-3xl">Follow us on</h2>
+              <div>
+                <SocialIcon />
+              </div>
+        </div>
+
+
     </div>
 
 

@@ -160,6 +160,11 @@ const serviceDetailsMobile = {
       price: "$50+",
       description: "Efficient back hair removal for a clean and groomed appearance."
     },
+    {
+      name: "Eyebrow Tinting 🆕",
+      price: "$30+",
+      description: "Enhance your natural brows with a semi-permanent tint that adds color, depth, and definition. Perfect for fuller-looking brows without daily makeup."
+    },
   ],
   design: [
     {
@@ -266,6 +271,11 @@ const serviceDetailsMobile = {
       price: "$10",
       description: "Add extensions to your big toes for a uniform look."
     },
+    {
+      name:"Eyelash Extensions 🆕",
+      price: "$120+",
+      description: "Get longer, fuller, and beautifully lifted lashes with our professional eyelash extensions. Customized to your desired look—whether natural or dramatic—for effortless beauty that lasts for weeks."
+    },
   ],
 };
 
@@ -354,13 +364,11 @@ export default function Home() {
         )
       )}
 
-      <div className="note-container text-center mt-10 px-6 py-4 bg-gray-100 border rounded-lg">
-        <p className="italic text-sm">
-          <strong>Note:</strong> All types of pedicure with additional gel polish will be extra{" "}
-          <strong>$12</strong>. Plus sign (<strong>+</strong>) indicates that the price could be
-          higher depending on the lengths and shapes.
-        </p>
-      </div>
+<div className="note-container text-center mt-10 px-6 py-4 bg-gray-100 border rounded-lg mx-auto max-w-3xl">
+  <p className="italic text-sm">
+    <strong>Note:</strong> An additional <strong>$12</strong> will be added to all pedicure types when gel polish is included. Prices marked with a plus sign (<strong>+</strong>) may vary based on nail length and shape. A <strong>2.3%</strong> discount is applied when paying with cash.
+  </p>
+</div>
 
       <div className="barcode-container text-center mt-6">
         <p className="mb-2 text-sm italic">

@@ -9,7 +9,7 @@ import Stories from "react-insta-stories";
 export default function Gallery() {
   
 
-const images = Array.from({ length: 47 }, (_, i) => `${import.meta.env.VITE_CDN_IMAGE_BASE}/pic-${i + 1}.png`).reverse();  // const bannerGallery = `${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerGallery.png`;
+const images = Array.from({ length: 59 }, (_, i) => `${import.meta.env.VITE_CDN_IMAGE_BASE}/pic-${i + 1}.png`).reverse();  // const bannerGallery = `${import.meta.env.VITE_CDN_IMAGE_BASE}/bannerGallery.png`;
 
   const initialVisibleImages = 9;
   const [visibleImages, setVisibleImages] = useState(initialVisibleImages);

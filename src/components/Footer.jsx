@@ -79,6 +79,8 @@ export default function Footer() {
             {/* <li>Sun: 12pm - 5pm</li> */}
             {/* <li>Sun: Closed for Mother's Day</li> */}
             {/* <li>Opening soon</li> */}
+            
+            {/* Make sure update google map, apple map, and facebook */}
             <li className="font-bold italic">*Holiday hours may be changed</li>
           </ul>
         </div>

@@ -15,14 +15,14 @@ export default function Header() {
     📞 Call Us
   </a>
 
-<a
+{/* <a
   href="https://m.me/570010286185742"
   target="_blank"
   rel="noopener noreferrer"
   className="hover-button message-button px-6 py-3 text-black dark:text-white rounded-full w-auto text-center bg-blue-200 hover:bg-blue-300 transition"
 >
   💬 Message Us
-</a>
+</a> */}
 
   <a
     href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"

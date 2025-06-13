@@ -37,8 +37,10 @@
     <title>Ocean Nail Spa | Gloucester Point, VA 23062</title>
   </head>
 
-  <!-- Messenger Chat Plugin -->
-  <!-- <div id="fb-root"></div>
+ 
+  <body>
+     <!-- Messenger Chat Plugin -->
+  <div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function () {
     FB.init({
@@ -56,18 +58,32 @@
     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
   })(document, 'script', 'facebook-jssdk');
-</script> -->
+</script>
 
 <!-- Messenger Chat Plugin -->
-<!-- <div
+<div
   class="fb-customerchat"
   attribution="setup_tool"
   page_id="570010286185742"
   theme_color="#0084ff"
   logged_in_greeting="Hi! How can we help you?"
   logged_out_greeting="Hi! Please log in to chat with us."
-></div> -->
-  <body>
+></div>
+
+
+
+<div class="floating-social-bar">
+  <a href="https://www.facebook.com/profile.php?id=61572202049830" target="_blank">
+    <img src="%VITE_CDN_IMAGE_BASE%/facebook-icon.png"  alt="Facebook" loading="lazy"/>
+  </a>
+  <a href="https://www.instagram.com/oceannailspa_gloucesterpoint/" target="_blank" >
+    <img src="%VITE_CDN_IMAGE_BASE%/instagram-icon.png"  alt="Instagram" loading="lazy"/>
+  </a>
+  <a href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9" target="_blank">
+    <img src="%VITE_CDN_IMAGE_BASE%/google_maps_icon.png" alt="Google Map" loading="lazy"/>
+  </a>
+</div>
+
  <!-- ElfSight Widget -->
  <!-- <div class="elfsight-popup" className = "absolute">
   <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
@@ -79,5 +95,7 @@
 
 <div id="root" className="relative"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+</body>
+
 </html>

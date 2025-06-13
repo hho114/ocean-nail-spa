@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "flowbite-react";
 // import * as Images from "../assets/images/index";
-import SocialIcon from "../components/SocialIcon";
+// import SocialIcon from "../components/SocialIcon";
 import Stories from "react-insta-stories";
 
 export default function Gallery() {
@@ -114,10 +114,10 @@ const images = Array.from({ length: 62 }, (_, i) => `${import.meta.env.VITE_CDN_
     <div className="absolute bottom-20 right-5 flex gap-4 z-[9999] pointer-events-auto">
       <a
         href="tel:+1 804 684 5086"
-        className="hover-button call-button flex items-center px-6 py-3 mx-4 text-black dark:text-white rounded-full gap-2"
+        className="hover-button"
       >
         📞
-        <span>Book Your Appointment</span>
+        <span> Book Your Appointment</span>
       </a>
     </div>
 
@@ -193,32 +193,15 @@ const images = Array.from({ length: 62 }, (_, i) => `${import.meta.env.VITE_CDN_
           </div>
         )}
       </div>
-      {/* Hover Buttons Section */}
-      {/* <div className="hover-buttons-container text-center mt-10">
-        <a
-          href="tel:+1 804 684 5086"
-          className="hover-button call-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
-        >
-          📞 Call Us
-        </a>
-
-        <a
-          href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover-button directions-button inline-block px-6 py-3 mx-4 dark:text-white rounded-full"
-        >
-          📍 Get Directions
-        </a>
-      </div> */}
+     
       
       {/* Follow Us Section */}
-      <div className="flex flex-col gallery-icon-container p-10 items-center">
+      {/* <div className="flex flex-col gallery-icon-container p-10 items-center">
         <h2 className="text-3xl">Follow us on</h2>
         <div>
           <SocialIcon />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

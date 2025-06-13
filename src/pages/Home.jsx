@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import SocialIcon from "../components/SocialIcon";
 // import { NavLink, Outlet } from "react-router-dom";
 // import * as Images from "../assets/images/index";
 
@@ -300,24 +299,7 @@ export default function Home() {
         <img src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/heroBanner.png`} alt="service-banner" loading="lazy" />
       </div>
 
-      {/* Hover Buttons Section */}
-      {/* <div className="hover-buttons-container text-center mt-10">
-        <a
-          href="tel:+1 804 684 5086"
-          className="hover-button call-button inline-block px-6 py-3 mx-4 text-black dark:text-white rounded-full"
-        >
-          📞 Call Us
-        </a>
-
-        <a
-          href="https://maps.app.goo.gl/SK4GQSCv9hTRTJpp9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover-button directions-button inline-block px-6 py-3 mx-4 dark:text-white rounded-full"
-        >
-          📍 Get Directions
-        </a>
-      </div> */}
+    
 
       <h2 className="text-center py-6 text-4xl">Our Services</h2>
       <p className="text-center italic pb-8">
@@ -388,12 +370,7 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="flex flex-col gallery-icon-container p-10 items-center">
-              <h2 className="text-3xl">Follow us on</h2>
-              <div>
-                <SocialIcon />
-              </div>
-            </div>
+      
     </div>
   );
 }

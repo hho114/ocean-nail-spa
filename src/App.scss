@@ -21,16 +21,11 @@ Header
 h3, h4 {
     margin: 0.5rem 0;
 }
-.social-icon-container {
-    a {
-        img {
-            &:hover {
-                opacity: 0.5;
-                cursor: pointer;
-            }
-        }
-    }
-}
+
+
+
+
+
 
 .navigation-link-container {
     a {
@@ -216,14 +211,14 @@ Footer
     bottom: 0;
     background-color: #fafafa;
 
-    a {
-        border-bottom: 0.05px solid #70a995;
-        color: #70a995;
+    // a {
+    //     // border-bottom: 0.05px solid #70a995;
+    //     // color: #70a995;
 
-        &:hover {
-            opacity: 0.5;
-        }
-    }
+    //     &:hover {
+    //         opacity: 0.5;
+    //     }
+    // }
 }
 
 @keyframes spin {
@@ -475,31 +470,97 @@ back-to-top
     overflow: hidden; /* Ensures content inside the rounded area is clipped */
   }
 
+
 /* Base style for hover buttons */
+
+// .hover-button {
+//     background: linear-gradient(135deg, #A8D3F0, #BCE3FA);
+//     color: #1A4D7F; /* Dark blue text color from logo */
+//     font-weight: bold;
+//     text-decoration: none;
+//     transition: transform 0.3s ease, box-shadow 0.3s ease;
+//     border-radius: 50px; /* Rounded corners */
+//     padding: 10px 20px;
+//     border: none; /* No border line */
+//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+//   }
+  
+//   /* Hover effect */
+//   .hover-button:hover {
+//     transform: scale(1.1);
+//     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+//   }
+
 .hover-button {
-    background: #A8D3F0; /* Light blue background from logo */
-    color: #1A4D7F; /* Dark blue text color from logo */
-    font-weight: bold;
+  background: linear-gradient(135deg, #A8D3F0, #BCE3FA);
+  color: #1A4D7F;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.2),     /* base shadow */
+    inset 0 2px 2px rgba(255, 255, 255, 0.6), /* light on top */
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1); /* shadow at bottom */
+}
+
+/* Hover effect */
+.hover-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 10px rgba(0, 0, 0, 0.3),
+    inset 0 2px 2px rgba(255, 255, 255, 0.7),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon-container {
+  a {
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 50px; /* Rounded corners */
-    padding: 10px 20px;
-    border: none; /* No border line */
+    border: none;
+    outline: none;
+
+    img {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.2); // Enlarge icon slightly
+        cursor: pointer;
+      }
+    }
   }
-  
-  /* Hover effect */
-  .hover-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link {
+  color: #1ca9c9; // Ocean Blue
+  font-weight: 600;
+  text-decoration: none; // remove underline
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    color: #00cfe8; // Brighter Aqua on hover
+    transform: scale(1.08);
+    cursor: pointer;
   }
-  
-  /* Specific button styles */
-  .call-button {
-    background: linear-gradient(135deg, #A8D3F0, #BCE3FA);
-  }
-  
-  .directions-button {
-    background: linear-gradient(135deg, #A8D3F0, #D0EBF9);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  .ocean-word {
+    font-family: 'Pacifico', cursive; // or similar script
+    color: #0066cc;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff,
+                 -1px 1px 0 #fff, 1px 1px 0 #fff; // white outline
   }
 
-  
+  .nail-spa-word {
+    color: #d62828; // strong red
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}

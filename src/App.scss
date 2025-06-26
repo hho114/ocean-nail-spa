@@ -314,28 +314,49 @@ back-to-top
 
 
 
-.nav-link {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    // color: #333;
-    color: #1A4D7F;
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
+// .nav-link {
+//     padding: 10px 20px;
+//     margin: 0 10px;
+//     border-radius: 5px;
+//     text-decoration: none;
+//     // color: #333;
+//     color: #1A4D7F;
+//     transition: all 0.3s ease;
+//     display: inline-block;
+//   }
   
-  .nav-link:hover {
+//   .nav-link:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   .nav-link.active {
+//     font-size: 1.2rem; /* Slightly larger font size for active link */
+//   font-weight: bold;
+//   color: #0E3A64;
+//     text-decoration: underline;
+//   }
+
+.nav-link {
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.5rem;
+  white-space: nowrap; // Keep text on one line
+  font-weight: 600;
+  color: #1A4D7F;
+  transition: transform 0.3s ease;
+
+  &:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
-  .nav-link.active {
-    font-size: 1.2rem; /* Slightly larger font size for active link */
-  font-weight: bold;
-  color: #0E3A64;
+
+  &.active {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0E3A64;
     text-decoration: underline;
   }
+}
 
 
   .floating-social-bar {
@@ -564,3 +585,62 @@ back-to-top
     letter-spacing: 1px;
   }
 }
+
+
+.menu-toggle-button {
+  background: linear-gradient(to bottom, #cceaff, #a6ddf0);
+  border: none;
+  border-radius: 12px;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  svg {
+    width: 28px;   // ⬅️ Increase icon size
+    height: 28px;
+  }
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px; // enough space below the button
+  right: 0; // align with right edge of button
+  width: 180px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+
+  .menu-link {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    color: #1A4D7F;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+

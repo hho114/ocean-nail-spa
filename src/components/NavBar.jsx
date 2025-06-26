@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+ // or wherever your SCSS file is
 // import storeLogo from "../assets/images/store-logo.png";
 // import * as Images from "../assets/images/index";
 
@@ -18,84 +19,48 @@ export default function NavBar() {
   // : storeLogo;
  
   return (
-    <div className="header-container w-3/4 mobile:w-11/12  mx-auto flex items-center justify-between mobile:justify-center">
-     {!isMenuOpen && (
-       
-        <div className="header-logo-container">
-          <a
-            className="site-logo"
-            href="https://www.oceannailspava.com"
-            // target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="desktop:w-2/12 mobile:w-3/12 rounded-full logo"
-              src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/store-logo.png`}
-              alt="dark-logo"
-              loading="lazy"
-            />
-          </a>
-        </div>
 
-        
-        )} 
+<div className="header-container w-3/4 mobile:w-11/12 mx-auto flex items-center justify-between mobile:justify-center">
 
-      {/* Hamburger Menu Icon */}
-      <div className="desktop:hidden mobile:pr-5">
-        <button
-          className="text-gray-600 focus:outline-none"
-          onClick={toggleMenu}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
-      </div>
-  
+  {/* Logo */}
+  <div className="header-logo-container">
+  <a
+    className="site-logo inline-block"
+    href="https://www.oceannailspava.com"
+    rel="noopener noreferrer"
+  >
+    <img
+      className="desktop:w-2/12 mobile:w-3/12 rounded-full logo"
+      src={`${import.meta.env.VITE_CDN_IMAGE_BASE}/store-logo.png`}
+      alt="dark-logo"
+      loading="lazy"
+    />
+  </a>
+</div>
 
-      {/* Navigation Links */}
-      <nav
-        className={`${
-          isMenuOpen ? "block" : "mobile:hidden"
-        } flex navigation-link-container desktop:gap-4 items-center mobile:gap-6`}
-      >
-        <NavLink
-          to="."
-          className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-        >
-          Home
-        </NavLink>
-        
-        <NavLink
-          to="/gallery"
-          className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-        >
-          Gallery
-        </NavLink>
+  {/* Desktop Navigation */}
+<nav className="hidden desktop:flex items-center gap-8"> {/* add gap here */}
+  <NavLink to="." className="nav-link">Home</NavLink>
+  <NavLink to="/gallery" className="nav-link">Gallery</NavLink>
+  <NavLink to="/aboutUs" className="nav-link">About Us</NavLink>
+</nav>
 
-        <NavLink
-          to="/aboutUs"
-          // style={({ isActive }) => (isActive ? activeStyles : null)}
-          className={({ isActive }) => `whitespace-nowrap nav-link ${isActive ? 'active' : ''}`}
-          // className="whitespace-nowrap"
-        >
-          About Us
-        </NavLink>
+  {/* Mobile Hamburger Menu */}
+  <div className="desktop:hidden mobile:pr-5 relative z-50">
+    <button className="menu-toggle-button" onClick={toggleMenu}>
+      <svg className="w-6 h-6" fill="none" stroke="#1A4D7F" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
 
-       
-        
-      </nav>
-    </div>
+     {isMenuOpen && (
+    <nav className="dropdown-menu">
+      <NavLink to="." className="menu-link" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+      <NavLink to="/gallery" className="menu-link" onClick={() => setIsMenuOpen(false)}>Gallery</NavLink>
+      <NavLink to="/aboutUs" className="menu-link" onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
+    </nav>
+  )}
+  </div>
+</div>
   );
 }

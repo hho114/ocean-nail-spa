@@ -69,7 +69,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-4">
             <li>Mon - Fri: 10am - 7pm</li>
             <li>Sat: 10am - 5pm</li>
-            <li>Sun: 12pm - 5pm</li>
+            <li>Sun: Closed </li>
             <li className="font-bold italic">*Holiday hours may be changed</li>
           </ul>
 
